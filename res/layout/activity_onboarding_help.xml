@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar_container" layout="@layout/left_aligned_toolbar" />
+    <com.ring.android.safe.container.SafeScrollView android:background="@color/blink_surface" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.image.ImageView android:id="@id/help_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:imageView_aspectRatio="3:2" app:imageView_scaleType="centerCrop" app:imageView_srcDrawable="@drawable/owl_reset_image" />
+            <TextView android:textColor="@color/blink_content_base" android:id="@id/help_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/reset_device" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" style="@style/TextAppearance.Blink.Title" />
+            <TextView android:textColor="@color/blink_content_base" android:id="@id/top_help_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginHorizontal="24.0dip" style="@style/TextAppearance.Blink.Body.Normal.Light" />
+            <TextView android:textColor="@color/blink_content_base" android:id="@id/bottom_help_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginHorizontal="24.0dip" style="@style/TextAppearance.Blink.Body.Normal.Light" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.StickyButtonModule android:layout_gravity="bottom" android:id="@id/help_ok_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_text="@string/ok" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

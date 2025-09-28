@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.cell.RightImageFlatCell android:id="@id/rightImageFlatCell" android:tag="layout/safe_databinding_item_right_image_flat_cell_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

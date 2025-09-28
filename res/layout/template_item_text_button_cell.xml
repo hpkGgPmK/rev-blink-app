@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="start" android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.button.TextButton android:gravity="start|center" android:id="@id/textButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:paddingStart="0.0dip" app:layout_constraintEnd_toEndOf="@id/anchorView" app:layout_constraintStart_toStartOf="@id/anchorView" app:layout_constraintTop_toTopOf="parent" />
+    <View android:id="@id/anchorView" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginStart="@dimen/cell_icon_value_horizontal_margin" android:layout_marginEnd="@dimen/cell_icon_value_horizontal_margin" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_max="@dimen/cell_layout_max_content_width" />
+</androidx.constraintlayout.widget.ConstraintLayout>

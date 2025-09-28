@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/rosie_calibration_nav_graph" app:startDestination="@id/enter_serial_number_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="enter_serial_number_fragment" android:name="com.immediasemi.blink.support.scanner.qrcode.EnterSerialNumberFragment" android:id="@id/enter_serial_number_fragment">
+        <action android:id="@id/navigateToSerialNumberHelpFragment" app:destination="@id/serial_number_help_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <fragment android:label="fragment_serial_number_help" android:name="com.immediasemi.blink.support.scanner.qrcode.SerialNumberHelpFragment" android:id="@id/serial_number_help_fragment">
+        <action android:id="@id/navigateToSerialNumberInstructionsFragment" app:destination="@id/serial_number_instructions_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <fragment android:label="fragment_serial_number_instructions" android:name="com.immediasemi.blink.support.scanner.qrcode.SerialNumberLocationFragment" android:id="@id/serial_number_instructions_fragment">
+        <argument android:name="device_qr_option" app:argType="com.immediasemi.blink.device.onboard.serial.DeviceQrOption" />
+    </fragment>
+</navigation>

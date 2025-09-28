@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.image.ImageView android:id="@id/lotus_not_connected_image" android:layout_width="fill_parent" android:layout_height="0.0dip" android:contentDescription="@string/checking_connections_ellipsis" app:imageView_aspectRatio="3:2" app:imageView_scaleType="centerCrop" app:imageView_srcDrawable="@drawable/lotus_not_found" app:layout_constraintBottom_toTopOf="@id/lotus_not_connected_area" app:layout_constraintHeight_percent="0.25" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" />
+    <com.ring.android.safe.area.DescriptionArea android:gravity="center_horizontal" android:id="@id/lotus_not_connected_area" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/lotus_not_connected_image" />
+    <com.ring.android.safe.button.module.StickyButtonModule android:id="@id/try_again_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_text="@string/try_again" app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

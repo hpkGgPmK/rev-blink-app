@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.cell.IconValueCell android:id="@id/inactive_plan_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/ic_blink_basic_plan" app:cell_text="@string/blink_basic_plan"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

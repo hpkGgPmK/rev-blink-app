@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/modify_country_root_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:theme="@style/BlinkActionBar" android:id="@id/modify_country_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/BlinkActionBar">
+        <TextView android:textSize="@dimen/title_bar_title_size" android:textStyle="bold" android:textColor="@color/blink_content_base" android:gravity="center" android:layout_gravity="center" android:id="@id/modify_country_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/country" />
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout android:background="@color/blink_surface" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="24.0dip" android:layout_marginVertical="32.0dip">
+                <TextView android:textSize="17.0sp" android:textColor="@color/blink_content_base" android:id="@id/modify_country_explanation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/modify_country_explanation" />
+                <com.google.android.material.button.MaterialButton android:id="@id/modify_country_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/loading_countries_ellipsis" app:icon="@drawable/triangle_background_down" app:iconGravity="end" app:iconSize="10.0dip" style="@style/CountryCodeButton" />
+            </LinearLayout>
+        </ScrollView>
+        <com.immediasemi.blink.views.ProgressLayout android:id="@id/modify_country_loading_indicator" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/view_media_source_filter_button_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.button.round.RoundButton android:id="@id/media_source_filter_button" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" app:btn_checkable="true" app:btn_size="x48" app:btn_style="backgroundPrimary" />
+    <TextView android:textAppearance="?safeBodyFootnoteMediumTextAppearance" android:gravity="center" android:id="@id/media_source_name_text" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_0_75x" android:importantForAccessibility="no" android:labelFor="@id/media_source_filter_button" />
+</LinearLayout>

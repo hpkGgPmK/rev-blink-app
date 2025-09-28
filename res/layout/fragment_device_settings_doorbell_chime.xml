@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/device_settings_doorbell_chime_root" android:tag="layout/fragment_device_settings_doorbell_chime_0" android:background="?colorBackgroundSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/doorbell_and_chime_settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/chime_type_cell" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/chime_type" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/chime_length_cell" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/device_doorbell_chime_settings_chime_length_description" app:cell_text="@string/chime_length" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/chime_power_cell" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/device_doorbell_chime_settings_chime_power_description" app:cell_text="@string/chime_power" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/mini_as_chime_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/device_doorbell_chime_settings_mini_as_chime_description" app:cell_text="@string/use_blink_mini_camera_as_chime" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/mount_with_wiring_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/mount_with_wiring" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/mount_without_wiring_cell" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/mount_without_wiring" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+</com.ring.android.safe.container.SafeLinearLayout>

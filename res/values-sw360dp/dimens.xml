@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="safe_cell_image_action_margin_between_buttons">16.0dip</dimen>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="?colorBackgroundSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/battery_extension_pack" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.image.ImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="wrap_content" app:imageView_srcDrawable="@drawable/add_watson" />
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/description_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_subText="@string/bep_upsell_subtext" app:area_text="@string/battery_extension_pack" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/motion_clip_length_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/motion_sensor" app:cell_iconTint="?colorPrimaryBase" app:cell_text="@string/bep_status_clip_length" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/video_quality_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/created_clip" app:cell_iconTint="?colorPrimaryBase" app:cell_text="@string/bep_status_video_quality" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/live_view_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/camera" app:cell_iconTint="?colorPrimaryBase" app:cell_text="@string/bep_status_live_view" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.StickyButtonModule android:layout_gravity="bottom" android:id="@id/button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_text="@string/bep_upsell_button_text" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

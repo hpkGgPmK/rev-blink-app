@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip">
+            <TextView android:textSize="@dimen/lotus_onboarding_header" android:textStyle="bold" android:textColor="@color/blink_content_base" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="64.0dip" android:layout_marginBottom="32.0dip" android:text="@string/lotus_hardware_setup_header" android:layout_marginStart="@dimen/lotus_onboarding_margin" android:layout_marginEnd="@dimen/lotus_onboarding_margin" app:layout_constraintTop_toTopOf="parent" />
+            <com.ring.android.safe.cell.ImageIconCell android:id="@id/lotus_kit_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/ic_lotus_hardware_kit" app:cell_iconType="m" app:cell_imageScaleType="fitCenter" app:cell_subText="@string/lotus_kit_description" app:cell_text="@string/your_lotus_kit" />
+            <com.ring.android.safe.cell.ImageIconCell android:id="@id/lotus_drill_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/ic_lotus_hardware_drill" app:cell_iconType="m" app:cell_imageScaleType="fitCenter" app:cell_subText="@string/mounting_wallplate_requirements_label" app:cell_text="@string/power_drill" />
+            <com.ring.android.safe.cell.ImageIconCell android:id="@id/lotus_stickytape_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/ic_lotus_hardware_stickytape" app:cell_iconType="m" app:cell_imageScaleType="fitCenter" app:cell_subText="@string/sticky_tape_description" app:cell_text="@string/sticky_tape" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.StickyButtonModule android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_text="@string/continue_" />
+</com.ring.android.safe.container.SafeLinearLayout>

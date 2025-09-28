@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rosie_calibrate_fragment_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/calibrate_pan_tilt_mount" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/rosie_calibrating_fragment_root" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.area.DescriptionArea android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_icon="@drawable/info_outline" app:area_iconTint="@color/blink_primary_base" app:area_text="@string/calibrating_pan_tilt_mount_ellipsis" />
+        <ImageView android:layout_gravity="center" android:id="@id/spinner" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="24.0dip" android:src="@drawable/avd_spinner" android:contentDescription="@string/calibrating_pan_tilt_mount_ellipsis" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:tint="?colorPrimaryBase" />
+    </com.ring.android.safe.container.SafeLinearLayout>
+</LinearLayout>

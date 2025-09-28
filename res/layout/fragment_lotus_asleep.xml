@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/lotus_asleep_toolbar_container" layout="@layout/left_aligned_toolbar" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/lotus_asleep_contact_cs_link" app:layout_constraintTop_toTopOf="parent">
+            <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ring.android.safe.image.ImageView android:id="@id/lotus_asleep_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/doorbell_setup" app:imageView_aspectRatio="3:2" app:imageView_srcDrawable="@drawable/lotus_press_button" />
+                <com.ring.android.safe.area.DescriptionArea android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_subText="@string/lotus_asleep_message" app:area_text="@string/lotus_asleep_header" />
+            </com.ring.android.safe.container.SafeLinearLayout>
+        </com.ring.android.safe.container.SafeScrollView>
+        <com.ring.android.safe.button.module.StickyButtonModule android:id="@id/lotus_asleep_contact_cs_link" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_buttonStyle="defaultAlternateButton" app:buttonModule_text="@string/contact_customer_service" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

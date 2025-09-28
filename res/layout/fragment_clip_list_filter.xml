@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/clip_list_filter_root" android:tag="layout/fragment_clip_list_filter_0" android:background="?colorBackgroundSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" bind:layout_constraintTop_toTopOf="parent" bind:title="@string/filters" />
+    <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/date_filter_group" android:layout_width="fill_parent" android:layout_height="wrap_content" bind:layout_constraintTop_toBottomOf="@id/toolbar">
+        <com.ring.android.safe.header.HeaderView android:id="@id/date_filter_header" android:layout_width="fill_parent" android:layout_height="wrap_content" bind:header_titleText="@string/date" bind:header_titleTextColor="@color/blink_content_base" />
+        <com.ring.android.safe.cell.IconValueCell android:id="@id/date_filter_start" android:layout_width="fill_parent" android:layout_height="wrap_content" bind:cell_icon="@drawable/calendar_timeline_default" bind:cell_iconTint="@color/blink_primary_base" bind:cell_text="@string/start" />
+        <com.ring.android.safe.cell.IconValueCell android:id="@id/date_filter_end" android:layout_width="fill_parent" android:layout_height="wrap_content" bind:cell_icon="@drawable/calendar_timeline_default" bind:cell_iconTint="@color/blink_primary_base" bind:cell_text="@string/end" />
+    </com.ring.android.safe.container.SafeLinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/device_list" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="0.0dip" bind:layoutManager="LinearLayoutManager" bind:layout_constraintBottom_toTopOf="@id/tag_filter_list" bind:layout_constraintTop_toBottomOf="@id/date_filter_group" />
+    <HorizontalScrollView android:id="@id/tag_filter_list" android:layout_width="fill_parent" android:layout_height="wrap_content" bind:layout_constraintBottom_toTopOf="@id/filter_button_module">
+        <LinearLayout android:orientation="horizontal" android:tag="binding_2" android:padding="@dimen/spacing_2x" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <include android:layout_width="@dimen/media_filter_button_width" android:layout_height="wrap_content" layout="@layout/view_media_source_filter_button" />
+            <include android:layout_width="@dimen/media_filter_button_width" android:layout_height="wrap_content" layout="@layout/view_media_source_filter_button" />
+            <include android:layout_width="@dimen/media_filter_button_width" android:layout_height="wrap_content" layout="@layout/view_media_source_filter_button" />
+            <include android:layout_width="@dimen/media_filter_button_width" android:layout_height="wrap_content" layout="@layout/view_media_source_filter_button" />
+            <include android:layout_width="@dimen/media_filter_button_width" android:layout_height="wrap_content" layout="@layout/view_media_source_filter_button" />
+            <include android:layout_width="@dimen/media_filter_button_width" android:layout_height="wrap_content" layout="@layout/view_media_source_filter_button" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <com.ring.android.safe.button.module.VerticalButtonModule android:id="@id/filter_button_module" android:layout_width="fill_parent" android:layout_height="wrap_content" bind:buttonModule_bottomText="@string/clear_filters" bind:buttonModule_topText="@string/apply_filters" bind:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

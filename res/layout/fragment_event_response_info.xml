@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/event_response_buttons" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/event_response_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_actionIconContentDescription="@string/offline" app:area_buttonText="@string/event_response_more_info_link" app:area_icon="@drawable/info_outline" app:area_iconTint="?colorSecondaryBackup" app:area_subText="@string/lotus_migrate_to_sm_always_on_description" app:area_text="@string/lotus_migrate_to_sm" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.VerticalButtonModule android:id="@id/event_response_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_bottomText="@string/maybe_later" app:buttonModule_topText="@string/yes" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

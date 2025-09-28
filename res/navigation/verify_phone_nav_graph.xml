@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/verify_phone_nav_graph" app:startDestination="@id/enter_phone_number_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="enter_phone_number_fragment" android:name="com.immediasemi.blink.phonenumber.ui.EnterPhoneNumberFragment" android:id="@id/enter_phone_number_fragment">
+        <argument android:name="password" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <action android:id="@id/navigateToVerifyPhoneNumberFragment" app:destination="@id/verify_phone_number_fragment" />
+    </fragment>
+    <fragment android:label="verify_phone_number_fragment" android:name="com.immediasemi.blink.phonenumber.ui.VerifyPhoneNumberFragment" android:id="@id/verify_phone_number_fragment">
+        <argument android:name="verificationChannel" app:argType="com.immediasemi.blink.common.account.verification.PhoneVerificationChannel" />
+        <argument android:name="allowPinResendSeconds" app:argType="long" />
+        <argument android:name="phoneNumber" app:argType="com.immediasemi.blink.phonenumber.PhoneNumber" app:nullable="true" />
+        <argument android:name="formattedPhoneNumber" app:argType="string" />
+        <argument android:name="password" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <argument android:name="trustDeviceEnabled" android:defaultValue="false" app:argType="boolean" />
+        <argument android:name="redirectUrl" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <action android:id="@id/navigateOut" app:popUpTo="@id/verify_phone_nav_graph" />
+    </fragment>
+</navigation>

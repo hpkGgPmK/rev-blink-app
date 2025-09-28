@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/select_system_nav_graph" app:startDestination="@id/select_system_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.immediasemi.blink.device.onboard.system.SelectSystemFragment" android:id="@id/select_system_fragment">
+        <action android:id="@id/navigateToCreateSystem" app:destination="@id/create_system_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.system.CreateSystemFragment" android:id="@id/create_system_fragment" />
+</navigation>

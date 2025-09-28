@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/floodlight_mount_offline_root" android:background="?colorBackgroundSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/lighting_settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/floodlight_disconnected_description_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_icon="@drawable/warning" app:area_iconTint="?colorNegativeBase" app:area_subText="@string/storm_camera_offline_description" app:area_text="@string/floodlight_is_disconnected" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/delete_device_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/delete" app:cell_iconTint="?colorNegativeBase" app:cell_text="@string/delete_device" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/share_access_nav_graph" app:startDestination="@id/share_access_info_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.immediasemi.blink.settings.access.ShareAccessInfoFragment" android:id="@id/share_access_info_fragment">
+        <action android:id="@id/navigateToShareAccessEmailFragment" app:destination="@id/share_access_email_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.access.ShareAccessEmailFragment" android:id="@id/share_access_email_fragment">
+        <action android:id="@id/navigateToManageAccessFragment" app:popUpTo="@id/share_access_info_fragment" app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

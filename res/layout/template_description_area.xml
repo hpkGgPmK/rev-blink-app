@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.container.SafeScrollView android:id="@id/contentContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.image.ImageView android:id="@id/image" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintDimensionRatio="H, 16:9" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_max="@dimen/safe_container_max_width" />
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/descriptionArea" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/image" />
+            <ViewStub android:id="@id/calloutCardViewStub" android:layout="@layout/safe_viewstub_calloutcard_area" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/descriptionArea" app:layout_constraintVertical_chainStyle="packed" />
+            <ImageView android:id="@id/spinner" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/avd_spinner" android:contentDescription="@string/safe_template_spinner_content_description" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/descriptionArea" app:tint="?colorPrimaryBase" />
+            <androidx.constraintlayout.widget.Barrier android:id="@id/barrier" android:layout_width="wrap_content" android:layout_height="wrap_content" app:barrierDirection="bottom" app:constraint_referenced_ids="descriptionArea,calloutCardSection,spinner" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="0.0dip" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/barrier" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.template.TemplateToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+</merge>

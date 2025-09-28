@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/activity_select_wifi_security_type_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="?actionBarSize" layout="@layout/left_aligned_toolbar" />
+    <com.ring.android.safe.container.SafeScrollView android:id="@id/content_container" android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <com.ring.android.safe.container.SafeLinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_text="@string/select_security_type" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/security_type_list" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.StickyButtonModule android:layout_gravity="bottom" android:id="@id/continue_with_security_type" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_buttonStyle="defaultMainButton" app:buttonModule_text="@string/continue_" app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

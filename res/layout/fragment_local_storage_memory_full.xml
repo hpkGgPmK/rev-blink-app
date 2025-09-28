@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/fragment_local_storage_memory_full" android:tag="layout/fragment_local_storage_memory_full_0" android:background="?colorBackgroundSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/local_storage" />
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/local_storage_full_description_area" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_icon="@drawable/warning" app:area_iconTint="@color/blink_negative_base" />
+            <com.ring.android.safe.card.CalloutCard android:id="@id/local_storage_full_callout_card" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/standard_margin" app:card_backgroundColor="@color/blink_negative_muted" app:card_iconSrc="@drawable/warning" app:card_iconTint="@color/blink_negative_base" app:card_subtext="@string/local_storage_full_callout_text" app:card_text="@string/warning" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.StickyButtonModule android:layout_gravity="bottom" android:id="@id/local_storage_safely_eject_button" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

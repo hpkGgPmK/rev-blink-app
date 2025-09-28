@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.github.mmin18.widget.RealtimeBlurView android:id="@id/blur_view" android:focusable="true" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:realtimeOverlayColor="@color/blink_neutral_300" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/biometric_unlock_failure_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="16.0dip">
+        <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/blink_content_base" android:id="@id/biometric_unlock_failure_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/authentication_failed" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <Button android:id="@id/biometric_unlock_try_again_button" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginBottom="16.0dip" android:text="@string/try_again" app:layout_constraintBottom_toTopOf="@id/biometric_unlock_sign_out_button" style="@style/blinkButton" />
+        <Button android:id="@id/biometric_unlock_sign_out_button" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/sign_out" app:layout_constraintBottom_toBottomOf="parent" style="@style/blinkButtonAlert" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

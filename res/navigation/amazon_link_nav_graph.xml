@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/amazon_link_nav_graph" app:startDestination="@id/amazonLinkingFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <action android:id="@id/navigateOut" app:popUpTo="@id/amazon_link_nav_graph" />
+    <fragment android:label="AmazonLinkingFragment" android:name="com.immediasemi.blink.activities.ui.main.AmazonLinkingFragment" android:id="@id/amazonLinkingFragment">
+        <argument android:name="createAccountFlow" app:argType="boolean" />
+        <action android:id="@id/navigateToLinkingSuccessFragment" app:destination="@id/amazonLinkingSuccessFragment" />
+        <action android:id="@id/navigateToLinkingErrorFragment" app:destination="@id/amazonLinkingErrorFragment" />
+    </fragment>
+    <fragment android:label="AmazonLinkingSuccessFragment" android:name="com.immediasemi.blink.activities.ui.main.AmazonLinkingSuccessFragment" android:id="@id/amazonLinkingSuccessFragment" />
+    <fragment android:label="AmazonLinkingErrorFragment" android:name="com.immediasemi.blink.activities.ui.main.AmazonLinkingErrorFragment" android:id="@id/amazonLinkingErrorFragment">
+        <argument android:name="message" app:argType="string" app:nullable="true" />
+    </fragment>
+</navigation>

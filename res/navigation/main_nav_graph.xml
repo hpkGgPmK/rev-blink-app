@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/main_nav_graph" app:startDestination="@id/loadingFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="loadingFragment" android:name="com.immediasemi.blink.activities.LoadingFragment" android:id="@id/loadingFragment" />
+    <action android:id="@id/navigateToLoginFragment" app:destination="@id/loginFragment" app:popUpTo="@id/loadingFragment" app:popUpToInclusive="true">
+        <argument android:name="redirectUrl" app:nullable="true" />
+    </action>
+    <fragment android:name="com.immediasemi.blink.account.auth.LoginFragment" android:id="@id/loginFragment">
+        <argument android:name="redirectUrl" app:nullable="true" />
+        <action android:id="@id/navigateToResetPasswordFragment" app:destination="@id/change_password_nav_graph">
+            <argument android:name="email" app:argType="string" />
+        </action>
+        <action android:id="@id/navigateToRegistrationFlow" app:destination="@id/registration_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <include app:graph="@navigation/change_password_nav_graph" />
+    <include app:graph="@navigation/registration_nav_graph" />
+    <action android:id="@id/navigateToAddPhoneNumber" app:destination="@id/add_phone_number_nav_graph" app:popUpTo="@id/loadingFragment" app:popUpToInclusive="true">
+        <argument android:name="password" app:argType="string" app:nullable="true" />
+    </action>
+    <include app:graph="@navigation/add_phone_number_nav_graph" />
+    <action android:id="@id/navigateToAppUpdateFragment" app:destination="@id/appUpdateFragment" app:popUpTo="@id/loadingFragment" app:popUpToInclusive="true" />
+    <fragment android:name="com.immediasemi.blink.update.AppUpdateFragment" android:id="@id/appUpdateFragment" />
+    <action android:id="@id/navigateToAmazonLinkingFragment" app:destination="@id/amazon_link_nav_graph" app:popUpTo="@id/loadingFragment" app:popUpToInclusive="true">
+        <argument android:name="createAccountFlow" app:argType="boolean" />
+    </action>
+    <include app:graph="@navigation/amazon_link_nav_graph" />
+    <action android:id="@id/navigateToAlexaLinkingFragment" app:destination="@id/alexa_linking_nav_graph" app:popUpTo="@id/loadingFragment" app:popUpToInclusive="true">
+        <argument android:name="deeplink" app:argType="string" app:nullable="true" />
+    </action>
+    <include app:graph="@navigation/alexa_linking_nav_graph" />
+</navigation>

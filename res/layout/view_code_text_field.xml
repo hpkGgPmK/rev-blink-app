@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.textfield.TextInputLayout android:theme="@style/TextInputLayoutTheme" android:id="@id/textInputLayout" android:saveEnabled="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="@dimen/safe_text_field_margin_start" android:layout_marginEnd="@dimen/safe_text_field_margin_end" app:hintEnabled="false" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/CodeTextInputLayoutStyle">
+        <com.ring.android.safe.textfield.CodeEditText android:id="@id/codeEditText" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="@dimen/pin_entry_text_height" android:layout_marginBottom="@dimen/safe_text_field_helper_margin" />
+    </com.google.android.material.textfield.TextInputLayout>
+</merge>

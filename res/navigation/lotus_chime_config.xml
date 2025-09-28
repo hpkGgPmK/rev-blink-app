@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/lotusChimeConfig" app:startDestination="@id/selectChimeType"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.chime.ChimeTypeSelectionFragment" android:id="@id/selectChimeType">
+        <argument android:name="networkId" app:argType="long" app:nullable="false" />
+        <argument android:name="lotusId" app:argType="long" app:nullable="false" />
+        <action android:id="@id/action_selectChimeType_to_testChimeSound" app:destination="@id/testChimeSound" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.chime.TestLotusChimeSoundFragment" android:id="@id/testChimeSound">
+        <argument android:name="networkId" app:argType="long" app:nullable="false" />
+        <argument android:name="lotusId" app:argType="long" app:nullable="false" />
+        <argument android:name="chimeConfig" app:argType="com.immediasemi.blink.models.LotusChimeConfig" app:nullable="false" />
+        <argument android:name="isFirstTest" android:defaultValue="true" app:argType="boolean" />
+        <argument android:name="performPowerAnalysis" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_testChimeSound_to_adjustChimeConfig" app:destination="@id/adjustChimeConfig" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_testChimeSound_to_onboardingComplete" app:destination="@id/onboardingComplete" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_testChimeSound_to_powerAnalysisResult" app:destination="@id/powerAnalysisResult" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_testChimeSound_to_customerSupport" app:destination="@id/customerSupport" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_testChimeSound_to_powerAnalysis" app:destination="@id/powerAnalysis" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.CustomerServiceFragment" android:id="@id/customerSupport" />
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.chime.AdjustChimeConfigFragment" android:id="@id/adjustChimeConfig">
+        <argument android:name="networkId" app:argType="long" app:nullable="false" />
+        <argument android:name="lotusId" app:argType="long" app:nullable="false" />
+        <argument android:name="chimeConfig" app:argType="com.immediasemi.blink.models.LotusChimeConfig" app:nullable="false" />
+        <argument android:name="adjustmentDirection" app:argType="com.immediasemi.blink.adddevice.lotus.chime.ChimeAdjustmentDirection" app:nullable="false" />
+        <argument android:name="performPowerAnalysis" app:argType="boolean" />
+        <action android:id="@id/action_adjustChimeConfig_to_testChimeSound" app:destination="@id/testChimeSound" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/testChimeSound" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.chime.PowerAnalysisFragment" android:id="@id/powerAnalysis">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="lotusId" app:argType="long" />
+        <argument android:name="showInstallationComplete" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_powerAnalysis_to_powerAnalysisResult" app:destination="@id/powerAnalysisResult" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.chime.PowerAnalysisResultFragment" android:id="@id/powerAnalysisResult">
+        <argument android:name="result" app:argType="com.immediasemi.blink.adddevice.lotus.chime.PowerAnalysisResult" />
+        <argument android:name="showInstallationComplete" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_powerAnalysisResult_to_onboardingComplete" app:destination="@id/onboardingComplete" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.OnboardingCompleteFragment" android:id="@id/onboardingComplete" />
+</navigation>

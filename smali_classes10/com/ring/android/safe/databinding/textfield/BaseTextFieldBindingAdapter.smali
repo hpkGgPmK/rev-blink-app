@@ -1,0 +1,772 @@
+.class public final Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter;
+.super Ljava/lang/Object;
+.source "BaseTextFieldBindingAdapter.kt"
+
+
+# annotations
+.annotation runtime Landroidx/databinding/BindingMethods;
+    value = {
+        .subannotation Landroidx/databinding/BindingMethod;
+            attribute = "textfield_inputType"
+            method = "setInputType"
+            type = Lcom/ring/android/safe/textfield/BaseTextField;
+        .end subannotation,
+        .subannotation Landroidx/databinding/BindingMethod;
+            attribute = "textfield_hint"
+            method = "setHint"
+            type = Lcom/ring/android/safe/textfield/BaseTextField;
+        .end subannotation,
+        .subannotation Landroidx/databinding/BindingMethod;
+            attribute = "textfield_placeholder"
+            method = "setPlaceholder"
+            type = Lcom/ring/android/safe/textfield/BaseTextField;
+        .end subannotation,
+        .subannotation Landroidx/databinding/BindingMethod;
+            attribute = "textfield_enabled"
+            method = "setEnabled"
+            type = Lcom/ring/android/safe/textfield/BaseTextField;
+        .end subannotation,
+        .subannotation Landroidx/databinding/BindingMethod;
+            attribute = "textfield_maxLength"
+            method = "setMaxLength"
+            type = Lcom/ring/android/safe/textfield/BaseTextField;
+        .end subannotation,
+        .subannotation Landroidx/databinding/BindingMethod;
+            attribute = "textfield_hiddenSelectionMenuOptions"
+            method = "setHiddenSelectionMenuOptions"
+            type = Lcom/ring/android/safe/textfield/BaseTextField;
+        .end subannotation
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\\\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\r\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0008\u00c1\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0012\u0010\u0003\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u0005\u001a\u00020\u0006H\u0007J\u0018\u0010\u0007\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\nH\u0007J\u001a\u0010\u000b\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0010\u000c\u001a\u0004\u0018\u00010\rH\u0007J\u001a\u0010\u000b\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0008\u0001\u0010\u000e\u001a\u00020\u000fH\u0007J\u001a\u0010\u0010\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0010\u000c\u001a\u0004\u0018\u00010\rH\u0007J\u001a\u0010\u0010\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0008\u0001\u0010\u000e\u001a\u00020\u000fH\u0007J\u001a\u0010\u0011\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0010\u000c\u001a\u0004\u0018\u00010\rH\u0007J\u001a\u0010\u0011\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0008\u0001\u0010\u000e\u001a\u00020\u000fH\u0007J\u001a\u0010\u0012\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0008\u0001\u0010\u000e\u001a\u00020\u000fH\u0007J\u0018\u0010\u0013\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0014\u001a\u00020\u000fH\u0007J\u0018\u0010\u0015\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0016\u001a\u00020\u000fH\u0007J\u001a\u0010\u0017\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0010\u0018\u001a\u0004\u0018\u00010\u0019H\u0007J\u001a\u0010\u001a\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0010\u001b\u001a\u0004\u0018\u00010\u001cH\u0007J\u001a\u0010\u001d\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0008\u0001\u0010\u000e\u001a\u00020\u000fH\u0007J\u001a\u0010\u001e\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0010\u001f\u001a\u0004\u0018\u00010\rH\u0007J\u001a\u0010\u001e\u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0008\u0001\u0010\u000e\u001a\u00020\u000fH\u0007J8\u0010 \u001a\u00020\u00082\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0010!\u001a\u0004\u0018\u00010\"2\u0008\u0010#\u001a\u0004\u0018\u00010$2\u0008\u0010%\u001a\u0004\u0018\u00010&2\u0008\u0010\'\u001a\u0004\u0018\u00010(H\u0007\u00a8\u0006)"
+    }
+    d2 = {
+        "Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter;",
+        "",
+        "()V",
+        "getTextString",
+        "",
+        "textField",
+        "Lcom/ring/android/safe/textfield/BaseTextField;",
+        "requestFocusAndShowKeyboard",
+        "",
+        "focus",
+        "",
+        "setError",
+        "value",
+        "",
+        "valueRes",
+        "",
+        "setHelperText",
+        "setHighlightedHelperText",
+        "setHint",
+        "setImeOptions",
+        "imeOptions",
+        "setMaxLines",
+        "maxLines",
+        "setOnEditorActionListener",
+        "listener",
+        "Landroid/widget/TextView$OnEditorActionListener;",
+        "setOnFocusChangeListener",
+        "onFocusChangeListener",
+        "Landroid/view/View$OnFocusChangeListener;",
+        "setPlaceholder",
+        "setText",
+        "text",
+        "setTextWatcher",
+        "before",
+        "Landroidx/databinding/adapters/TextViewBindingAdapter$BeforeTextChanged;",
+        "on",
+        "Landroidx/databinding/adapters/TextViewBindingAdapter$OnTextChanged;",
+        "after",
+        "Landroidx/databinding/adapters/TextViewBindingAdapter$AfterTextChanged;",
+        "textAttrChanged",
+        "Landroidx/databinding/InverseBindingListener;",
+        "databinding_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final INSTANCE:Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter;
+
+
+# direct methods
+.method public static synthetic $r8$lambda$j-xGPjNZZZaB3QA1k-JlQUv7upk(Lcom/ring/android/safe/textfield/BaseTextField;)V
+    .locals 0
+
+    invoke-static {p0}, Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter;->requestFocusAndShowKeyboard$lambda$1(Lcom/ring/android/safe/textfield/BaseTextField;)V
+
+    return-void
+.end method
+
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter;
+
+    invoke-direct {v0}, Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter;-><init>()V
+
+    sput-object v0, Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter;->INSTANCE:Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static final getTextString(Lcom/ring/android/safe/textfield/BaseTextField;)Ljava/lang/String;
+    .locals 1
+    .annotation runtime Landroidx/databinding/InverseBindingAdapter;
+        attribute = "textfield_text"
+        event = "textfield_textAttrChanged"
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getText()Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static final requestFocusAndShowKeyboard(Lcom/ring/android/safe/textfield/BaseTextField;Z)V
+    .locals 1
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_requestFocusAndShowKeyboard"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter$$ExternalSyntheticLambda0;
+
+    invoke-direct {p1, p0}, Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter$$ExternalSyntheticLambda0;-><init>(Lcom/ring/android/safe/textfield/BaseTextField;)V
+
+    invoke-virtual {p0, p1}, Lcom/ring/android/safe/textfield/BaseTextField;->post(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method private static final requestFocusAndShowKeyboard$lambda$1(Lcom/ring/android/safe/textfield/BaseTextField;)V
+    .locals 2
+
+    const-string v0, "$textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getEditText()Landroid/widget/EditText;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/EditText;->requestFocus()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/EditText;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "input_method"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "null cannot be cast to non-null type android.view.inputmethod.InputMethodManager"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+
+    check-cast p0, Landroid/view/View;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, p0, v1}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public static final setError(Lcom/ring/android/safe/textfield/BaseTextField;I)V
+    .locals 2
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_error"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "getContext(...)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v0, p1}, Lcom/ring/android/safe/databinding/DataBindingExtensionsKt;->getStringDataBindingCompat(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/CharSequence;
+
+    invoke-virtual {p0, p1}, Lcom/ring/android/safe/textfield/BaseTextField;->setError(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public static final setError(Lcom/ring/android/safe/textfield/BaseTextField;Ljava/lang/CharSequence;)V
+    .locals 1
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_error"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getError()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, p1}, Lcom/ring/android/safe/textfield/BaseTextField;->setError(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public static final setHelperText(Lcom/ring/android/safe/textfield/BaseTextField;I)V
+    .locals 2
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_helperText"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "getContext(...)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v0, p1}, Lcom/ring/android/safe/databinding/DataBindingExtensionsKt;->getStringDataBindingCompat(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/CharSequence;
+
+    invoke-virtual {p0, p1}, Lcom/ring/android/safe/textfield/BaseTextField;->setHelperText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public static final setHelperText(Lcom/ring/android/safe/textfield/BaseTextField;Ljava/lang/CharSequence;)V
+    .locals 1
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_helperText"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getHelperText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, p1}, Lcom/ring/android/safe/textfield/BaseTextField;->setHelperText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public static final setHighlightedHelperText(Lcom/ring/android/safe/textfield/BaseTextField;I)V
+    .locals 2
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_highlightedHelperText"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "getContext(...)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v0, p1}, Lcom/ring/android/safe/databinding/DataBindingExtensionsKt;->getStringDataBindingCompat(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/CharSequence;
+
+    invoke-virtual {p0, p1}, Lcom/ring/android/safe/textfield/BaseTextField;->setHighlightedHelperText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public static final setHighlightedHelperText(Lcom/ring/android/safe/textfield/BaseTextField;Ljava/lang/CharSequence;)V
+    .locals 1
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_highlightedHelperText"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getHighlightedHelperText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, p1}, Lcom/ring/android/safe/textfield/BaseTextField;->setHighlightedHelperText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public static final setHint(Lcom/ring/android/safe/textfield/BaseTextField;I)V
+    .locals 2
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_hint"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "getContext(...)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v0, p1}, Lcom/ring/android/safe/databinding/DataBindingExtensionsKt;->getStringDataBindingCompat(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/CharSequence;
+
+    invoke-virtual {p0, p1}, Lcom/ring/android/safe/textfield/BaseTextField;->setHint(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public static final setImeOptions(Lcom/ring/android/safe/textfield/BaseTextField;I)V
+    .locals 1
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_imeOptions"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getEditText()Landroid/widget/EditText;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/widget/EditText;->setImeOptions(I)V
+
+    return-void
+.end method
+
+.method public static final setMaxLines(Lcom/ring/android/safe/textfield/BaseTextField;I)V
+    .locals 1
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_maxLines"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getEditText()Landroid/widget/EditText;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/widget/EditText;->setMaxLines(I)V
+
+    return-void
+.end method
+
+.method public static final setOnEditorActionListener(Lcom/ring/android/safe/textfield/BaseTextField;Landroid/widget/TextView$OnEditorActionListener;)V
+    .locals 1
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_editorActionListener"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getEditText()Landroid/widget/EditText;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, p1}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static final setOnFocusChangeListener(Lcom/ring/android/safe/textfield/BaseTextField;Landroid/view/View$OnFocusChangeListener;)V
+    .locals 2
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_onFocusChangeListener"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    move-object v0, p0
+
+    check-cast v0, Landroid/view/View;
+
+    sget v1, Lcom/ring/android/safe/databinding/R$id;->safe_databinding_text_field_focus_change_listener_tag_id:I
+
+    invoke-static {v0, p1, v1}, Landroidx/databinding/adapters/ListenerUtil;->trackListener(Landroid/view/View;Ljava/lang/Object;I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View$OnFocusChangeListener;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0, v0}, Lcom/ring/android/safe/textfield/BaseTextField;->removeOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)Z
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0, p1}, Lcom/ring/android/safe/textfield/BaseTextField;->addOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public static final setPlaceholder(Lcom/ring/android/safe/textfield/BaseTextField;I)V
+    .locals 2
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_placeholder"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "getContext(...)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v0, p1}, Lcom/ring/android/safe/databinding/DataBindingExtensionsKt;->getStringDataBindingCompat(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/CharSequence;
+
+    invoke-virtual {p0, p1}, Lcom/ring/android/safe/textfield/BaseTextField;->setPlaceholder(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public static final setText(Lcom/ring/android/safe/textfield/BaseTextField;I)V
+    .locals 2
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_text"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "getContext(...)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {v0, p1}, Lcom/ring/android/safe/databinding/DataBindingExtensionsKt;->getStringDataBindingCompat(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/CharSequence;
+
+    invoke-static {p0, p1}, Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter;->setText(Lcom/ring/android/safe/textfield/BaseTextField;Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public static final setText(Lcom/ring/android/safe/textfield/BaseTextField;Ljava/lang/CharSequence;)V
+    .locals 1
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        value = {
+            "textfield_text"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0, p1}, Lcom/ring/android/safe/textfield/BaseTextField;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static final setTextWatcher(Lcom/ring/android/safe/textfield/BaseTextField;Landroidx/databinding/adapters/TextViewBindingAdapter$BeforeTextChanged;Landroidx/databinding/adapters/TextViewBindingAdapter$OnTextChanged;Landroidx/databinding/adapters/TextViewBindingAdapter$AfterTextChanged;Landroidx/databinding/InverseBindingListener;)V
+    .locals 1
+    .annotation runtime Landroidx/databinding/BindingAdapter;
+        requireAll = false
+        value = {
+            "textfield_beforeTextChanged",
+            "textfield_onTextChanged",
+            "textfield_afterTextChanged",
+            "textfield_textAttrChanged"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    const-string v0, "textField"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-nez p1, :cond_1
+
+    if-nez p3, :cond_1
+
+    if-nez p2, :cond_1
+
+    if-eqz p4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    new-instance v0, Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter$setTextWatcher$newTextWatcher$1;
+
+    invoke-direct {v0, p1, p2, p4, p3}, Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter$setTextWatcher$newTextWatcher$1;-><init>(Landroidx/databinding/adapters/TextViewBindingAdapter$BeforeTextChanged;Landroidx/databinding/adapters/TextViewBindingAdapter$OnTextChanged;Landroidx/databinding/InverseBindingListener;Landroidx/databinding/adapters/TextViewBindingAdapter$AfterTextChanged;)V
+
+    move-object p1, v0
+
+    :goto_1
+    move-object p2, p0
+
+    check-cast p2, Landroid/view/View;
+
+    sget p3, Lcom/ring/android/safe/databinding/R$id;->safe_databinding_text_field_text_watcher_tag_id:I
+
+    invoke-static {p2, p1, p3}, Landroidx/databinding/adapters/ListenerUtil;->trackListener(Landroid/view/View;Ljava/lang/Object;I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/ring/android/safe/databinding/textfield/BaseTextFieldBindingAdapter$setTextWatcher$newTextWatcher$1;
+
+    if-eqz p2, :cond_2
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getEditText()Landroid/widget/EditText;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_2
+
+    check-cast p2, Landroid/text/TextWatcher;
+
+    invoke-virtual {p3, p2}, Landroid/widget/EditText;->removeTextChangedListener(Landroid/text/TextWatcher;)V
+
+    :cond_2
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p0}, Lcom/ring/android/safe/textfield/BaseTextField;->getEditText()Landroid/widget/EditText;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_3
+
+    check-cast p1, Landroid/text/TextWatcher;
+
+    invoke-virtual {p0, p1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    :cond_3
+    return-void
+.end method

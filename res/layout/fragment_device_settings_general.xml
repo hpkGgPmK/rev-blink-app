@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/device_settings_general_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/general_settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeScrollView android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ring.android.safe.cell.HintCell android:id="@id/last_updated_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.ring.android.safe.cell.TextFieldCell android:id="@id/device_name_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:textfield_hint="@string/name" app:textfield_maxLength="@integer/max_characters" />
+                <com.ring.android.safe.header.HeaderView android:id="@id/device_details_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/details" />
+                <com.ring.android.safe.cell.RightIconCell android:id="@id/battery_level_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/battery_level" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/battery_extension_pack" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/battery_extension_pack" app:cell_valueText="@string/linked" />
+                <com.ring.android.safe.cell.RightIconCell android:id="@id/battery_extension_pack_upsell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_iconTint="@color/blink_content_base" app:cell_rightIcon="@drawable/ic_carrot_right" app:cell_text="@string/battery_extension_pack" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/power_status_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/external_power_status" app:cell_valueText="@string/good" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/firmware_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/firmware" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/button_led_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/button_led" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/status_led_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/status_led" />
+                <com.ring.android.safe.header.HeaderView android:id="@id/network_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/network" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/change_wifi_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/change_wifi" />
+                <com.ring.android.safe.cell.RightIconCell android:id="@id/wifi_connection_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/network_strength" />
+                <com.ring.android.safe.cell.RightIconCell android:id="@id/sync_module_connection_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/connection_to_sync_module" />
+                <com.ring.android.safe.cell.RightIconCell android:id="@id/camera_network_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_iconTint="@color/blink_content_base" app:cell_rightIcon="@drawable/ic_carrot_right" app:cell_subText="@string/camera_network_subtext" app:cell_text="@string/camera_network" />
+                <com.ring.android.safe.header.HeaderView android:id="@id/temperature_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/temperature" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/device_temperature_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/set_up_temperature_alerts_period" app:cell_text="@string/camera_temperature" />
+                <Space android:layout_width="wrap_content" android:layout_height="@dimen/spacing_1_5x" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/delete_device_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/delete" app:cell_iconTint="?colorNegativeBase" app:cell_text="@string/delete_device" />
+            </com.ring.android.safe.container.SafeLinearLayout>
+        </com.ring.android.safe.container.SafeScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</com.ring.android.safe.container.SafeLinearLayout>

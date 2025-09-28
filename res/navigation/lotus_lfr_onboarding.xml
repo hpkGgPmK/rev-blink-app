@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/lotus_onboarding" app:startDestination="@id/removeBackCover"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.RemoveBackCoverFragment" android:id="@id/removeBackCover">
+        <action android:id="@id/action_removeBackCover_to_insertBatteries" app:destination="@id/insertBatteries" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.InsertBatteriesFragment" android:id="@id/insertBatteries">
+        <action android:id="@id/action_insertBatteries_to_lfrOnboardingRedLight" app:destination="@id/lfrOnboardingRedLight" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.LfrOnboardingRedLightFragment" android:id="@id/lfrOnboardingRedLight">
+        <action android:id="@id/action_lfrOnboardingRedLight_to_addingLotus" app:destination="@id/addingLotus" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_lfrOnboardingRedLight_to_pressResetButton" app:destination="@id/pressResetButton" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_lfrOnboardingRedLight_to_hardwareSetupOptIn" app:destination="@id/hardwareSetupOptIn" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.AddingLotusFragment" android:id="@id/addingLotus">
+        <action android:id="@id/action_addingLotus_to_lotusNotDiscoveredLfr" app:destination="@id/lotusNotDiscoveredLfr" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/lfrOnboardingRedLight" />
+        <action android:id="@id/action_addingLotus_to_hardwareSetupOptIn" app:destination="@id/hardwareSetupOptIn" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToContactSupportFragment" app:destination="@id/contact_support_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/contact_support" android:name="com.immediasemi.blink.adddevice.ContactSupportFragment" android:id="@id/contact_support_fragment">
+        <argument android:name="statusMessage" app:argType="string" app:nullable="false" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.LotusNotDiscoveredLfrFragment" android:id="@id/lotusNotDiscoveredLfr">
+        <action android:id="@id/lotusNotDiscoveredLfr_to_addingLotus" app:destination="@id/addingLotus" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/lotusNotDiscoveredLfr_to_pressResetButton" app:destination="@id/pressResetButton" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.PressResetButtonLfrFragment" android:id="@id/pressResetButton">
+        <action android:id="@id/action_pressResetButton_to_addingLotus" app:destination="@id/addingLotus" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.HardwareSetupOptInFragment" android:id="@id/hardwareSetupOptIn">
+        <action android:id="@id/action_hardwareSetupOptIn_to_hardwareSetupIntro" app:destination="@id/hardwareSetupIntro" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_hardwareSetupOptIn_to_hardwareSetupReminder" app:destination="@id/hardwareSetupReminder" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.HardwareSetupReminderFragment" android:id="@id/hardwareSetupReminder" />
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.HardwareSetupIntroFragment" android:id="@id/hardwareSetupIntro">
+        <action android:id="@id/action_hardwareSetupIntro_to_chimeSetupPrompt" app:destination="@id/chimeSetupPrompt" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_hardwareSetupIntro_to_replacingExistingDoorbellPrompt" app:destination="@id/replacingExistingDoorbellPrompt" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_hardwareSetupIntro_to_confirmTransformerCompatibility" app:destination="@id/lotus_chime_box_connection" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <argument android:name="hardware_setup_flow" app:argType="com.immediasemi.blink.adddevice.lotus.HardwareSetupFlow" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.LotusMountOnlyFragment" android:id="@id/mountOnlyStep">
+        <argument android:name="step" app:argType="com.immediasemi.blink.adddevice.lotus.MountingOnlyStep" app:nullable="false" />
+        <action android:id="@id/action_mountOnlyStep_to_mountOnlyStep" app:destination="@id/mountOnlyStep" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_mountOnlyStep_to_wedgeOrCornerPrompt" app:destination="@id/wedgeOrCornerPrompt" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.ReplacingExistingDoorbellPromptFragment" android:id="@id/replacingExistingDoorbellPrompt">
+        <action android:id="@id/action_replacingExistingDoorbellPrompt_to_mountOnlyStep" app:destination="@id/mountOnlyStep" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_replacingExistingDoorbellPrompt_to_wedgeOrCornerPrompt" app:destination="@id/wedgeOrCornerPrompt" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.ChimeSetupPromptFragment" android:id="@id/chimeSetupPrompt">
+        <action android:id="@id/action_chimeSetupPrompt_to_replacingExistingDoorbellPrompt" app:destination="@id/replacingExistingDoorbellPrompt" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_chimeSetupPrompt_to_confirmTransformerCompatibility" app:destination="@id/lotus_chime_box_connection" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.WedgeOrCornerPromptFragment" android:id="@id/wedgeOrCornerPrompt">
+        <action android:id="@id/action_wedgeOrCornerPrompt_to_positionYourLotus" app:destination="@id/positionYourLotus" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_wedgeOrCornerPrompt_to_wedgeAngle" app:destination="@id/wedgeAngle" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <include app:graph="@navigation/lotus_chime_box_connection" />
+    <fragment android:label="PositionYourLotus" android:name="com.immediasemi.blink.adddevice.lotus.DoorbellPositionStartFragment" android:id="@id/positionYourLotus">
+        <action android:id="@id/action_positionYourLotus_to_screwInWallplate" app:destination="@id/screwInWallplate" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.DoorbellWedgeAngleFragment" android:id="@id/wedgeAngle">
+        <action android:id="@id/action_wedgeAngle_to_screwInWedges" app:destination="@id/screwInWedges" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.ScrewInWedgesFragment" android:id="@id/screwInWedges">
+        <action android:id="@id/screwInWedges_to_attachWallplate" app:destination="@id/attachWallplate" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.AttachWallplateFragment" android:id="@id/attachWallplate">
+        <action android:id="@id/attachWallplate_to_placeLotusIntoBackCover" app:destination="@id/placeLotusIntoBackCover" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.ScrewInWallplateFragment" android:id="@id/screwInWallplate">
+        <action android:id="@id/action_screwInWallplate_to_placeLotusIntoBackCover" app:destination="@id/placeLotusIntoBackCover" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.OnboardingCompleteFragment" android:id="@id/onboardingComplete" />
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.WireLotusPromptFragment" android:id="@id/wireLotusPrompt">
+        <action android:id="@id/action_wireLotusPrompt_to_hardwareSetupIntro" app:destination="@id/hardwareSetupIntro" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_wireLotusPrompt_to_wiringSettingsReminder" app:destination="@id/wiringSettingsReminder" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.WiringSettingsReminderFragment" android:id="@id/wiringSettingsReminder" />
+    <fragment android:label="@string/change_wifi" android:name="com.immediasemi.blink.adddevice.lotus.PlaceLotusIntoBackCoverFragment" android:id="@id/placeLotusIntoBackCover">
+        <argument android:name="destination" app:argType="com.immediasemi.blink.adddevice.lotus.PlaceLotusIntoBackCoverDestination" app:nullable="false" />
+        <action android:id="@id/action_placeLotusIntoBackCover_to_turnOnPowerWifiChange" app:destination="@id/turnOnPowerWifiChange" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_placeLotusIntoBackCover_to_onboardingComplete" app:destination="@id/onboardingComplete" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/change_wifi" android:name="com.immediasemi.blink.adddevice.lotus.TurnOnPowerWifiChangeFragment" android:id="@id/turnOnPowerWifiChange">
+        <action android:id="@id/action_turnOnPowerWifiChange_to_powerAnalysis" app:destination="@id/powerAnalysis" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_turnOnPowerWifiChange_to_testChimeWifiChange" app:destination="@id/testChimeWifiChange" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/test_chime" android:name="com.immediasemi.blink.adddevice.lotus.WifiChangeTestChimeFragment" android:id="@id/testChimeWifiChange">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="lotusId" app:argType="long" />
+        <action android:id="@id/action_testChimeWifiChange_to_chimeResultsWifiChange" app:destination="@id/chimeResultsWifiChange" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/lotus_test_chime_complete_message" android:name="com.immediasemi.blink.adddevice.lotus.WifiChangeChimeResultsFragment" android:id="@id/chimeResultsWifiChange">
+        <action android:id="@id/action_chimeResultsWifiChange_to_powerAnalysis" app:destination="@id/powerAnalysis" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_chimeResultsWifiChange_to_checkPowerWifiChange" app:destination="@id/checkPowerWifiChange" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/lotus_check_power_header" android:name="com.immediasemi.blink.adddevice.lotus.WifiChangeCheckPowerFragment" android:id="@id/checkPowerWifiChange">
+        <action android:id="@id/action_checkPowerWifiChange_to_testChimeWifiChange" app:destination="@id/testChimeWifiChange" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/testChimeWifiChange" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.chime.PowerAnalysisFragment" android:id="@id/powerAnalysis">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="lotusId" app:argType="long" />
+        <argument android:name="showInstallationComplete" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_powerAnalysis_to_powerAnalysisResult" app:destination="@id/powerAnalysisResult" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/change_wifi" android:name="com.immediasemi.blink.adddevice.lotus.chime.PowerAnalysisResultFragment" android:id="@id/powerAnalysisResult">
+        <argument android:name="result" app:argType="com.immediasemi.blink.adddevice.lotus.chime.PowerAnalysisResult" />
+        <argument android:name="showInstallationComplete" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_powerAnalysisResult_to_onboardingComplete" app:destination="@id/onboardingComplete" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+</navigation>

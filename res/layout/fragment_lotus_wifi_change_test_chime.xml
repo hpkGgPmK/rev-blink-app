@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.immediasemi.blink.views.ProgressLayout android:id="@id/progress_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/test_chime_button" app:layout_constraintTop_toTopOf="parent">
+            <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ring.android.safe.image.ImageView android:id="@id/chime_sound_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/test_chime" app:imageView_aspectRatio="3:2" app:imageView_scaleType="centerCrop" app:imageView_srcDrawable="@drawable/chime_soundwave" />
+                <com.ring.android.safe.area.DescriptionArea android:id="@id/test_chime_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_subText="@string/lotus_test_chime_message" app:area_text="@string/test_chime" />
+            </com.ring.android.safe.container.SafeLinearLayout>
+        </com.ring.android.safe.container.SafeScrollView>
+        <com.ring.android.safe.button.module.StickyButtonModule android:id="@id/test_chime_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_text="@string/test_chime" app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.immediasemi.blink.views.ProgressLayout>

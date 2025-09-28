@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.imageview.ShapeableImageView android:id="@id/imageView" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" android:backgroundTint="?colorSurface" />
+    <com.ring.android.safe.badge.Badge android:textColor="?colorContentConstantBase" android:layout_gravity="end|bottom|center" android:id="@id/badge" android:focusable="false" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:backgroundTint="?colorScrimBase" />
+    <com.ring.android.safe.button.round.RoundButton android:layout_gravity="end" android:id="@id/closeButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:contentDescription="@string/safe_card_gallery_close_button_content_description" app:btn_icon="@drawable/close" app:btn_size="x32" app:btn_style="iconConstantNeutral" />
+</merge>

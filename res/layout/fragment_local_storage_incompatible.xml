@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/fragment_local_storage_incompatible_0" android:background="?colorBackgroundSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/local_storage" />
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/incompatible_description_area" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_icon="@drawable/warning" app:area_iconTint="@color/blink_negative_base" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.StickyButtonModule android:layout_gravity="bottom" android:id="@id/incompatible_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_text="@string/incompatible_button_text" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/device_settings_audio_root" android:tag="layout/fragment_device_settings_audio_0" android:background="?colorBackgroundSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/audio_settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ring.android.safe.cell.SliderCell android:id="@id/speaker_volume_cell" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_label="@string/speaker_volume" app:cell_sliderIconEnd="@drawable/speaker" app:cell_sliderIconEndTint="?colorPrimaryBase" app:cell_sliderIconStart="@drawable/speaker_minimum" app:cell_sliderIconStartTint="?colorPrimaryBase" app:cell_subText="@string/device_audio_settings_speaker_volume_description" />
+                <com.ring.android.safe.cell.SliderCell android:id="@id/ding_tone_volume_cell" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_label="@string/ding_tone_volume" app:cell_sliderIconEnd="@drawable/speaker" app:cell_sliderIconEndTint="?colorPrimaryBase" app:cell_sliderIconStart="@drawable/speaker_minimum" app:cell_sliderIconStartTint="?colorPrimaryBase" app:cell_subText="@string/device_audio_settings_ding_tone_volume_description" />
+                <com.ring.android.safe.cell.SliderCell android:id="@id/mini_chime_volume_cell" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_label="@string/mini_as_a_chime_volume" app:cell_sliderIconEnd="@drawable/speaker" app:cell_sliderIconEndTint="?colorPrimaryBase" app:cell_sliderIconStart="@drawable/speaker_minimum" app:cell_sliderIconStartTint="?colorPrimaryBase" app:cell_subText="@string/device_audio_settings_mini_chime_volume_description" />
+            </com.ring.android.safe.container.SafeLinearLayout>
+        </com.ring.android.safe.container.SafeScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</com.ring.android.safe.container.SafeLinearLayout>

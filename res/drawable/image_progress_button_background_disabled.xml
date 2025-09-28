@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <path android:name="background" android:fillColor="@color/blink_black_300" android:pathData="M0,0 L24,0 L24,24 L0,24 z" />
+        <path android:name="slash" android:pathData="M24,0 L0,24 z" android:strokeColor="@color/blink_white_900" android:strokeWidth="1.0" />
+    </group>
+</vector>

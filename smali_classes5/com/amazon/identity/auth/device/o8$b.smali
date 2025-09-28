@@ -1,0 +1,45 @@
+.class final Lcom/amazon/identity/auth/device/o8$b;
+.super Ljava/lang/Object;
+.source "DCP"
+
+# interfaces
+.implements Lcom/amazon/identity/mobi/common/javascript/AsyncJavaScriptCall;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/amazon/identity/auth/device/o8;->getCredential(Ljava/lang/String;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/amazon/identity/auth/device/o8;
+
+
+# direct methods
+.method constructor <init>(Lcom/amazon/identity/auth/device/o8;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amazon/identity/auth/device/o8$b;->a:Lcom/amazon/identity/auth/device/o8;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run(Lorg/json/JSONObject;Lcom/amazon/identity/mobi/common/javascript/Promise;Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/amazon/identity/auth/device/o8$b;->a:Lcom/amazon/identity/auth/device/o8;
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/amazon/identity/auth/device/o8;->b(Lorg/json/JSONObject;Lcom/amazon/identity/mobi/common/javascript/Promise;Ljava/lang/String;)V
+
+    return-void
+.end method

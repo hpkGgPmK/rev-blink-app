@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/fragment_additional_trial_0" android:background="@color/blink_surface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.container.SafeScrollView android:fadingEdgeLength="@dimen/scrollbar_shadow_fading_edge_length" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:background="@color/blink_surface" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/trial_house_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/trial_summary" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/additional_trial_description_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_buttonText="@string/learn_more" />
+            <com.ring.android.safe.header.HeaderView android:id="@id/additional_trial_features_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/additional_trial_feature_list" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.VerticalButtonModule android:layout_gravity="bottom" android:id="@id/additional_trial_button_module" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_bottomText="@string/no_thanks" app:buttonModule_topText="@string/start_trial" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

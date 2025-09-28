@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/battery_extension_pack_status_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/battery_extension_pack" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.ring.android.safe.container.SafeScrollView android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/description_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_subText="@string/bep_status_description" app:area_text="@string/battery_extension_pack" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/status_clip_length" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/motion_sensor" app:cell_iconTint="?colorPrimaryBase" app:cell_text="@string/bep_status_clip_length" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/status_video_quality" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/created_clip" app:cell_iconTint="?colorPrimaryBase" app:cell_text="@string/bep_status_video_quality" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/status_live_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/camera" app:cell_iconTint="?colorPrimaryBase" app:cell_text="@string/bep_status_live_view" />
+            <Space android:layout_width="wrap_content" android:layout_height="@dimen/spacing_1x" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/delete_bep_device" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/delete" app:cell_iconTint="?colorNegativeBase" app:cell_text="@string/delete_device" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+</com.ring.android.safe.container.SafeLinearLayout>

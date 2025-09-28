@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="44.0dip" android:width="88.0dip" android:viewportWidth="88.0" android:viewportHeight="44.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/blink_content_constant_backup_dark" android:pathData="M0.8665,17.8665C6.5309,12.2021 13.2555,7.7089 20.6563,4.6433C28.0572,1.5778 35.9894,-0 44,0C52.0107,0 59.9428,1.5778 67.3437,4.6434C74.7446,7.7089 81.4692,12.2021 87.1335,17.8665L61.2534,43.7466C58.9877,41.4809 56.2978,39.6836 53.3375,38.4573C50.3771,37.2311 47.2043,36.6 44,36.6C40.7958,36.6 37.6229,37.2311 34.6625,38.4573C31.7022,39.6836 29.0123,41.4808 26.7466,43.7466L0.8665,17.8665Z" android:fillAlpha="1.0" />
+    <path android:fillColor="#00000000" android:pathData="M36,26L44,18L52,26" android:strokeColor="@color/blink_content_base_light" android:strokeWidth="2.0" android:strokeLineCap="round" android:strokeLineJoin="round" />
+</vector>

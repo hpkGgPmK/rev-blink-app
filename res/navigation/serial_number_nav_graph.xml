@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/serial_number_nav_graph" app:startDestination="@id/scan_qr_code_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.immediasemi.blink.device.onboard.serial.ScanQrCodeFragment" android:id="@id/scan_qr_code_fragment">
+        <action android:id="@id/navigateToEnterSerialManually" app:destination="@id/enter_serial_manually_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToQrCodeLocation" app:destination="@id/qr_code_location_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/popToEnterSerialManually" app:destination="@id/enter_serial_manually_fragment" app:popUpTo="@id/scan_qr_code_fragment" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.serial.EnterSerialManuallyFragment" android:id="@id/enter_serial_manually_fragment">
+        <action android:id="@id/navigateToQrCodeLocation" app:destination="@id/qr_code_location_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToScanQrCode" app:destination="@id/scan_qr_code_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.serial.QrCodeLocationFragment" android:id="@id/qr_code_location_fragment">
+        <action android:id="@id/navigateToSerialInstructions" app:destination="@id/serial_instructions_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.serial.SerialInstructionsFragment" android:id="@id/serial_instructions_fragment">
+        <argument android:name="serial_resources" app:argType="com.immediasemi.blink.device.onboard.serial.SerialNumberHelpDeviceCategory" />
+    </fragment>
+</navigation>

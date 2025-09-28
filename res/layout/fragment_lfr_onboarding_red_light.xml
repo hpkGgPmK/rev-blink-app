@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/onboarding_red_light_animation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/doorbell_setup" app:layout_constraintTop_toTopOf="parent" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/lotus_wait_for_blinking_led" />
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/onboarding_red_light_buttons" app:layout_constraintTop_toBottomOf="@id/onboarding_red_light_animation">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/onboarding_red_light_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_subText="@string/lfr_onboarding_red_light_body" app:area_text="@string/onboarding_red_light_header" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.VerticalButtonModule android:id="@id/onboarding_red_light_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_bottomText="@string/not_blinking_red_question" app:buttonModule_topText="@string/continue_" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

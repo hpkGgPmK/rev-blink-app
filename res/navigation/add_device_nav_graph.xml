@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/add_device_nav_graph" app:startDestination="@id/addDeviceOptionsFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="fragment_add_device_options" android:name="com.immediasemi.blink.adddevice.AddDeviceOptionsFragment" android:id="@id/addDeviceOptionsFragment">
+        <action android:id="@id/action_addDeviceOptionsFragment_to_serialNumberScanFragment" app:destination="@id/serialNumberScanFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/openAccessorySetup" app:destination="@id/accessorySetupFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/openPanTiltSetup" app:destination="@id/panTiltMountSetupFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left">
+            <argument android:name="onboardState" app:argType="com.immediasemi.blink.adddevice.PanTiltOnboardSteps" />
+        </action>
+        <action android:id="@id/openFloodlightMountSetup" app:destination="@id/floodlightMountSetupFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left">
+            <argument android:name="onboardState" app:argType="com.immediasemi.blink.adddevice.FloodlightMountOnboardSteps" />
+        </action>
+        <action android:id="@id/navigateToSuperiorInstallationCheckFragment" app:destination="@id/superiorInstallationCheckFragment" />
+    </fragment>
+    <fragment android:label="fragment_serial_number_scan" android:name="com.immediasemi.blink.adddevice.SerialNumberScanFragment" android:id="@id/serialNumberScanFragment">
+        <action android:id="@id/action_serialNumberScanFragment_to_selectSystemFragment" app:destination="@id/selectSystemFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/action_serialNumberScanFragment_to_smRequired" app:destination="@id/smRequired" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/navigateToSerialNumberHelpFragment" app:destination="@id/serial_number_help_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/action_navigateToAddBEP" app:destination="@id/add_bep_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <include app:graph="@navigation/add_bep_nav_graph" />
+    <fragment android:label="fragment_serial_number_help" android:name="com.immediasemi.blink.support.scanner.qrcode.SerialNumberHelpFragment" android:id="@id/serial_number_help_fragment">
+        <action android:id="@id/navigateToSerialNumberInstructionsFragment" app:destination="@id/serial_number_instructions_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <fragment android:label="fragment_serial_number_instructions" android:name="com.immediasemi.blink.support.scanner.qrcode.SerialNumberLocationFragment" android:id="@id/serial_number_instructions_fragment">
+        <argument android:name="device_qr_option" app:argType="com.immediasemi.blink.device.onboard.serial.DeviceQrOption" />
+    </fragment>
+    <fragment android:label="fragment_accessory_setup" android:name="com.immediasemi.blink.adddevice.AccessorySetupFragment" android:id="@id/accessorySetupFragment" />
+    <fragment android:label="fragment_select_system" android:name="com.immediasemi.blink.adddevice.SelectSystemFragment" android:id="@id/selectSystemFragment">
+        <action android:id="@id/action_selectSystemFragment_to_updatingSyncModuleFirmwareFragment" app:destination="@id/updatingSyncModuleFirmwareFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/action_selectSystemFragment_to_addingDeviceFragment" app:destination="@id/addingDeviceFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/action_selectSystemFragment_to_onboardingActivity" app:destination="@id/onboardingActivity" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/action_selectSystemFragment_to_lotusOnboardingFlow" app:destination="@id/lotusOnboardingFlow" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/action_selectSystemFragment_to_smRequired" app:destination="@id/smRequired" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/action_selectSystemFragment_to_smRecommended" app:destination="@id/smRecommended" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/action_selectSystemFragment_to_createNewSystemFragment" app:destination="@id/createNewSystemFragment" />
+    </fragment>
+    <fragment android:label="fragment_select_coverage" android:name="com.immediasemi.blink.adddevice.SelectCoverageFragment" android:id="@id/selectCoverage">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+    </fragment>
+    <activity android:name="com.immediasemi.blink.adddevice.lotus.AddLotusActivity" android:id="@id/lotusOnboardingFlow">
+        <argument android:name="lotus_screen_flow" app:argType="com.immediasemi.blink.adddevice.lotus.LotusScreenFlow" />
+        <argument android:name="serial_number" app:argType="string" app:nullable="false" />
+        <argument android:name="network_id" app:argType="long" />
+        <argument android:name="lotus_id" android:defaultValue="0L" app:argType="long" />
+        <argument android:name="chime_config" android:defaultValue="@null" app:argType="com.immediasemi.blink.models.LotusChimeConfig" app:nullable="true" />
+        <argument android:name="revision" app:argType="com.immediasemi.blink.db.CameraRevision" />
+    </activity>
+    <fragment android:label="SyncModuleRequired" android:name="com.immediasemi.blink.adddevice.lotus.SyncModuleRequiredFragment" android:id="@id/smRequired">
+        <action android:id="@id/action_lotusSmRequired_to_onboardingActivity" app:destination="@id/onboardingActivity" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <activity android:name="com.immediasemi.blink.activities.onboarding.OnboardingWaitingForBlueLightActivity" android:id="@id/onboardingActivity" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    <fragment android:label="SyncModuleRecommended" android:name="com.immediasemi.blink.adddevice.lotus.SyncModuleRecommendedFragment" android:id="@id/smRecommended">
+        <action android:id="@id/action_lotusSmRecommended_to_removeBackCoverWifi" app:destination="@id/removeBackCoverWifi" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <fragment android:label="RemoveBackCover" android:name="com.immediasemi.blink.adddevice.lotus.RemoveBackCoverWifiFragment" android:id="@id/removeBackCoverWifi">
+        <action android:id="@id/action_removeBackCoverWifiFragment_to_insertBatteriesWifiFragment" app:destination="@id/insertBatteriesWifi" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <fragment android:label="InsertBatteries" android:name="com.immediasemi.blink.adddevice.lotus.InsertBatteriesWifiFragment" android:id="@id/insertBatteriesWifi">
+        <action android:id="@id/action_insertBatteriesWifiFragment_to_onboardingRedLightFragment" app:destination="@id/onboardingRedLight" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <fragment android:label="OnboardingRedLight" android:name="com.immediasemi.blink.adddevice.lotus.OnboardingRedLightFragment" android:id="@id/onboardingRedLight">
+        <action android:id="@id/action_onboardingRedLight_to_pressResetButton" app:destination="@id/pressResetButton" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="OnboardingRedLight" android:name="com.immediasemi.blink.adddevice.lotus.PressResetButtonWifiFragment" android:id="@id/pressResetButton">
+        <action android:id="@id/action_pressResetButton_to_onboardingRedLight" app:destination="@id/onboardingRedLight" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:launchSingleTop="true" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/onboardingRedLight" />
+    </fragment>
+    <fragment android:label="UpdatingSyncModuleFirmware" android:name="com.immediasemi.blink.adddevice.UpdatingSyncModuleFirmwareFragment" android:id="@id/updatingSyncModuleFirmwareFragment">
+        <action android:id="@id/action_updatingSyncModuleFirmwareFragment_to_addingDeviceFragment" app:destination="@id/addingDeviceFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <fragment android:label="AddingDeviceFragment" android:name="com.immediasemi.blink.adddevice.AddingDeviceFragment" android:id="@id/addingDeviceFragment">
+        <action android:id="@id/navigateToContactSupportFragment" app:destination="@id/contact_support_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateBackToFloodlightMountSetup" app:destination="@id/floodlightMountSetupFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/floodlightMountSetupFragment" app:popUpToInclusive="false" />
+        <action android:id="@id/action_addingDeviceFragment_to_selectVo9Range" app:destination="@id/selectCoverage" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <fragment android:label="@string/contact_support" android:name="com.immediasemi.blink.adddevice.ContactSupportFragment" android:id="@id/contact_support_fragment">
+        <argument android:name="statusMessage" app:argType="string" app:nullable="false" />
+    </fragment>
+    <fragment android:label="TurnOffPowerWifiChangeFragment" android:name="com.immediasemi.blink.adddevice.lotus.TurnOffPowerWifiChangeFragment" android:id="@id/turnOffPowerFragment">
+        <action android:id="@id/action_turnOffPowerFragment_to_slideOutLotusFragment" app:destination="@id/slideOutLotusFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <fragment android:label="SlideOutLotusFragment" android:name="com.immediasemi.blink.adddevice.lotus.SlideOutLotusFragment" android:id="@id/slideOutLotusFragment">
+        <action android:id="@id/action_slideOutLotusFragment_to_lotusResetButtonFragment" app:destination="@id/lotusResetButtonFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <fragment android:label="LotusResetButtonFragment" android:name="com.immediasemi.blink.adddevice.lotus.LotusResetButtonFragment" android:id="@id/lotusResetButtonFragment">
+        <action android:id="@id/action_lotusResetButtonFragment_to_onboardingRedLightFragment" app:destination="@id/onboardingRedLight" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <fragment android:label="fragment_pan_tilt_setup" android:name="com.immediasemi.blink.adddevice.PanTiltMountSetupFragment" android:id="@id/panTiltMountSetupFragment">
+        <argument android:name="onboardState" android:defaultValue="CONNECT_MOUNT" app:argType="com.immediasemi.blink.adddevice.PanTiltOnboardSteps" />
+        <action android:id="@id/continuePanTiltSetup" app:destination="@id/panTiltMountSetupFragment" app:launchSingleTop="false" />
+        <action android:id="@id/scanMiniSerialFragment" app:destination="@id/serialNumberScanFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <fragment android:label="fragment_floodlight_mount_setup" android:name="com.immediasemi.blink.adddevice.FloodlightMountSetupFragment" android:id="@id/floodlightMountSetupFragment">
+        <argument android:name="onboardState" android:defaultValue="REMOVE_MOUNTING_BRACKET" app:argType="com.immediasemi.blink.adddevice.FloodlightMountOnboardSteps" />
+        <action android:id="@id/continueFloodlightMountSetup" app:destination="@id/floodlightMountSetupFragment" app:launchSingleTop="false" />
+        <action android:id="@id/scanCameraSerialFragment" app:destination="@id/serialNumberScanFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <fragment android:label="fragment_create_new_system" android:name="com.immediasemi.blink.adddevice.CreateNewSystemFragment" android:id="@id/createNewSystemFragment">
+        <action android:id="@id/action_createNewSystemFragment_to_onboardingActivity" app:destination="@id/onboardingActivity" />
+        <action android:id="@id/action_createNewSystemFragment_to_addingDeviceFragment" app:destination="@id/addingDeviceFragment" />
+        <action android:id="@id/action_createNewSystemFragment_to_lotusOnboardingFlow" app:destination="@id/lotusOnboardingFlow" />
+        <action android:id="@id/action_createNewSystemFragment_to_smRecommended" app:destination="@id/smRecommended" />
+    </fragment>
+    <fragment android:label="SuperiorInstallationCheckFragment" android:name="com.immediasemi.blink.adddevice.superior.SuperiorInstallationCheckFragment" android:id="@id/superiorInstallationCheckFragment">
+        <action android:id="@id/navigateToSerialNumberScanFragment" app:destination="@id/serialNumberScanFragment" />
+        <action android:id="@id/navigateToSuperiorInstallFragment" app:destination="@id/superiorInstallFragment" />
+    </fragment>
+    <fragment android:label="SuperiorInstallFragment" android:name="com.immediasemi.blink.adddevice.superior.SuperiorInstallFragment" android:id="@id/superiorInstallFragment">
+        <argument android:name="step" app:argType="com.immediasemi.blink.adddevice.superior.SuperiorInstallStep" />
+        <action android:id="@id/navigateToNextSuperiorInstallationStep" app:destination="@id/superiorInstallFragment" />
+        <action android:id="@id/navigateToSerialNumberScanFragment" app:destination="@id/serialNumberScanFragment" />
+    </fragment>
+    <fragment android:label="CameraBatteryPackInstruction" android:name="com.immediasemi.blink.adddevice.CameraBatteryPackInstructionFragment" android:id="@id/cameraBatteryPackInstruction">
+        <action android:id="@id/navigateToSystemSelection" app:destination="@id/selectSystemFragment" />
+        <argument android:name="state" app:argType="com.immediasemi.blink.adddevice.BatteryPackInstructionState" />
+    </fragment>
+    <action android:id="@id/navigateToCameraBatteryPackInstruction" app:destination="@id/cameraBatteryPackInstruction" />
+</navigation>

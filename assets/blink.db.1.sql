@@ -1,0 +1,12 @@
+CREATE TABLE video (_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    id INTEGER UNIQUE,
+                    camera_name TEXT,
+                    camera_id INTEGER,
+                    viewed TEXT,
+                    thumbnail TEXT,
+                    created_at TEXT,
+                    address TEXT,
+                    deleted INTEGER,
+                    network_name TEXT,
+                    network_id INTEGER,
+                    local_deleted INTEGER NOT NULL DEFAULT 0);

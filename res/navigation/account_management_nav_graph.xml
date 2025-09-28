@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/account_management_nav_graph" app:startDestination="@id/account_management_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="@string/account_management" android:name="com.immediasemi.blink.settings.account.AccountManagementFragment" android:id="@id/account_management_fragment">
+        <action android:id="@id/navigateToChangeEmailFragment" app:destination="@id/change_email_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToChangePassword" app:destination="@id/change_password_verify_account" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToEnterPhoneNumberFragment" app:destination="@id/verify_phone_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToModifyCountryFragment" app:destination="@id/modify_country_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.email.ChangeEmailFragment" android:id="@id/change_email_fragment">
+        <argument android:name="password" app:argType="string" />
+        <action android:id="@id/navigateToChangeEmailVerifyAccountFragment" app:destination="@id/change_email_verify_account" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/account_management_fragment" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.email.ChangeEmailVerifyAccountFragment" android:id="@id/change_email_verify_account" />
+    <fragment android:name="com.immediasemi.blink.settings.password.ChangePasswordVerifyAccountFragment" android:id="@id/change_password_verify_account">
+        <action android:id="@id/navigateToChangePasswordFragment" app:destination="@id/change_password_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/account_management_fragment" />
+    </fragment>
+    <fragment android:label="@string/manage_devices" android:name="com.immediasemi.blink.settings.password.ChangePasswordFragment" android:id="@id/change_password_fragment">
+        <argument android:name="token" app:argType="string" />
+    </fragment>
+    <include app:graph="@navigation/verify_phone_nav_graph" />
+    <fragment android:label="fragment_modify_country" android:name="com.immediasemi.blink.activities.hamburgermenu.ModifyCountryFragment" android:id="@id/modify_country_fragment" />
+</navigation>

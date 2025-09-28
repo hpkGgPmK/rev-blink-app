@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/container" android:background="@color/blink_background_surface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar_container" layout="@layout/left_aligned_toolbar" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ring.android.safe.image.ImageView android:id="@id/help_image" android:layout_width="fill_parent" android:layout_height="wrap_content" app:imageView_aspectRatio="3:2" app:imageView_scaleType="centerCrop" app:imageView_srcDrawable="@drawable/wifi_picker" />
+                <com.ring.android.safe.area.DescriptionArea android:id="@id/connect_to_device" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_subText="@string/go_to_wifi_settings" app:area_text="@string/connect_to_device_manually" />
+            </com.ring.android.safe.container.SafeLinearLayout>
+        </com.ring.android.safe.container.SafeScrollView>
+        <com.ring.android.safe.button.module.StickyButtonModule android:layout_gravity="bottom" android:id="@id/go_to_settings" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_text="@string/go_to_settings" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</com.ring.android.safe.container.SafeLinearLayout>

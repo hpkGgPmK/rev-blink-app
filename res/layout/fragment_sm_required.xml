@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.area.DescriptionArea android:id="@id/sm_required_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_subText="@string/sm_required_body" app:area_text="@string/sm_required_header" app:layout_constraintBottom_toBottomOf="@id/sm_required_buttons" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.2" />
+    <com.ring.android.safe.button.module.VerticalButtonModule android:id="@id/sm_required_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_bottomText="@string/no_sm_button" app:buttonModule_topText="@string/add_sync_module" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

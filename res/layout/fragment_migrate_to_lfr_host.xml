@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/add_device_flow_root_layout" android:background="@color/blink_surface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:theme="@style/BlinkActionBar" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" android:textColor="@color/blink_content_base" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/toolbar_heading" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/event_response" android:lines="1" app:autoSizeMinTextSize="10.0sp" app:autoSizeTextType="uniform" />
+        <TextView android:textColor="@color/blink_primary_base" android:gravity="end|center" android:layout_gravity="end" android:id="@id/toolbar_cancel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="48.0dip" android:text="@string/cancel" android:lines="1" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:autoSizeMaxTextSize="15.0sp" app:autoSizeMinTextSize="10.0sp" app:autoSizeTextType="uniform" />
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.fragment.app.FragmentContainerView android:name="androidx.navigation.fragment.NavHostFragment" android:id="@id/nav_host" android:layout_width="fill_parent" android:layout_height="fill_parent" app:defaultNavHost="true" />
+</LinearLayout>

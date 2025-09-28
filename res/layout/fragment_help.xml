@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/help_root_layout" android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/help" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.ring.android.safe.container.SafeScrollView android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.header.HeaderView android:id="@id/contact_customer_support_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/contact_customer_support" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/contact_support" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/contact_support" />
+            <com.ring.android.safe.header.HeaderView android:id="@id/faq_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/faq" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/help_articles" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/help_articles" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/community_forum" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/community_forum" />
+            <com.ring.android.safe.header.HeaderView android:id="@id/legal_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/legal" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/legal_and_compliance" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/legal_and_compliance" />
+            <Space android:layout_width="wrap_content" android:layout_height="@dimen/spacing_1_5x" />
+            <com.ring.android.safe.cell.HintCell android:id="@id/version_hint_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+</com.ring.android.safe.container.SafeLinearLayout>

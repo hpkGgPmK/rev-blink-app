@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar_container" layout="@layout/left_aligned_toolbar" />
+    <RelativeLayout android:background="@color/blink_surface" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar_container">
+        <androidx.core.widget.ContentLoadingProgressBar android:layout_gravity="center" android:id="@id/automatic_onboarding_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:progressBarStyleLarge" />
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:layout_gravity="center" android:id="@id/automatic_onboarding_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_below="@id/automatic_onboarding_spinner" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="@style/TextBoxPrimary" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

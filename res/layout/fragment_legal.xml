@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/legal_notices_root_layout" android:background="?colorBackgroundSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/legal_and_compliance" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.ring.android.safe.cell.IconValueCell android:id="@id/privacy_policy" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/privacy_notice" />
+    <com.ring.android.safe.cell.IconValueCell android:id="@id/terms_of_service" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/terms_of_service" />
+    <com.ring.android.safe.cell.IconValueCell android:id="@id/open_source_licenses" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/open_source_compliance" />
+    <com.ring.android.safe.cell.IconValueCell android:id="@id/safety_and_compliance" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/safety_and_compliance" />
+    <com.ring.android.safe.cell.IconValueCell android:id="@id/one_year_warranty" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ring.android.safe.cell.IconValueCell android:id="@id/return_policy" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/return_policy" />
+    <com.ring.android.safe.cell.IconValueCell android:id="@id/cookie_policy" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/cookie_policy" />
+    <com.ring.android.safe.cell.IconValueCell android:id="@id/device_power_consumption" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/device_power_consumption" />
+    <com.ring.android.safe.cell.IconValueCell android:id="@id/software_security_updates" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/software_security_updates" />
+</com.ring.android.safe.container.SafeLinearLayout>

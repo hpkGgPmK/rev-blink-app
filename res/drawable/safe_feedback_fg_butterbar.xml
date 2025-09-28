@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetBottom="@dimen/safe_butterbar_depth_border_inset_bottom"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape android:shape="rectangle">
+        <corners android:topLeftRadius="?safeMediumCorner" android:topRightRadius="?safeMediumCorner" />
+        <stroke android:width="@dimen/safe_depth_border_width" android:color="?colorDepthBorder" />
+    </shape>
+</inset>

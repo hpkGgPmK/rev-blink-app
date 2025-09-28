@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/registration_nav_graph" app:startDestination="@id/registrationCountryFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.immediasemi.blink.account.registration.RegistrationCountryFragment" android:id="@id/registrationCountryFragment">
+        <action android:id="@id/navigateToRegistrationEmailFragment" app:destination="@id/registrationEmailFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.account.registration.RegistrationEmailFragment" android:id="@id/registrationEmailFragment">
+        <action android:id="@id/navigateToRegistrationPasswordFragment" app:destination="@id/registrationPasswordFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.account.registration.RegistrationPasswordFragment" android:id="@id/registrationPasswordFragment">
+        <action android:id="@id/navigateToRegistrationVerifyAccountFragment" app:destination="@id/registrationVerifyAccountFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/registrationCountryFragment" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.account.registration.RegistrationVerifyAccountFragment" android:id="@id/registrationVerifyAccountFragment" />
+</navigation>

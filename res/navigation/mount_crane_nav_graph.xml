@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/mount_crane_nav_graph" app:startDestination="@id/camera_placement_crane_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.immediasemi.blink.device.onboard.camera.crane.CameraPlacementCraneFragment" android:id="@id/camera_placement_crane_fragment">
+        <action android:id="@id/navigateToRemoveMountingPlate" app:destination="@id/remove_mounting_plate_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.camera.crane.RemoveMountingPlateFragment" android:id="@id/remove_mounting_plate_fragment">
+        <action android:id="@id/navigateToSecureMountingPlate" app:destination="@id/secure_mounting_plate_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.camera.crane.SecureMountingPlateFragment" android:id="@id/secure_mounting_plate_fragment">
+        <action android:id="@id/navigateToTwistMountingPlate" app:destination="@id/twist_mounting_plate_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.camera.crane.TwistMountingPlateFragment" android:id="@id/twist_mounting_plate_fragment">
+        <action android:id="@id/navigateToAttachingCamera" app:destination="@id/attaching_camera_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToAttachingCameraCeiling" app:destination="@id/attaching_camera_ceiling_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.camera.crane.AttachingCameraFragment" android:id="@id/attaching_camera_fragment">
+        <action android:id="@id/navigateToOutdoorInstallation" app:destination="@id/outdoor_installation_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.camera.crane.AttachingCameraCeilingFragment" android:id="@id/attaching_camera_ceiling_fragment">
+        <action android:id="@id/navigateToOutdoorInstallation" app:destination="@id/outdoor_installation_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.camera.crane.OutdoorInstallationFragment" android:id="@id/outdoor_installation_fragment" />
+</navigation>

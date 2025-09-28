@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="clips_auto_delete_after_x_days">
+        <item quantity="other">Clips auto-delete after %1$d days</item>
+        <item quantity="one">Clips auto-delete after %1$d day</item>
+    </plurals>
+    <plurals name="delete_system_with_devices_messages">
+        <item quantity="other">System has %1$d devices that will be unusable after the system is deleted. You will need to add those devices to a system again to use them.</item>
+        <item quantity="one">System has a device that will be unusable after the system is deleted. You will need to add the device to a system again to use it.</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Fast-forward %d seconds</item>
+        <item quantity="one">Fast-forward %d second</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Rewind %d seconds</item>
+        <item quantity="one">Rewind %d second</item>
+    </plurals>
+    <plurals name="login_lockout_message">
+        <item quantity="other">Your account is locked out for %1$d minutes.</item>
+        <item quantity="one">Your account is locked out for one minute.</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d new notifications</item>
+        <item quantity="one">%d new notification</item>
+    </plurals>
+    <plurals name="safe_video_minutes">
+        <item quantity="other">minutes</item>
+        <item quantity="one">minute</item>
+    </plurals>
+    <plurals name="safe_video_seconds">
+        <item quantity="other">seconds</item>
+        <item quantity="one">second</item>
+    </plurals>
+    <plurals name="safex_a11y_more_n_events">
+        <item quantity="other">Plus %1$s more events</item>
+        <item quantity="one">Plus %1$s more event</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="other">Seconds</item>
+        <item quantity="one">Second</item>
+    </plurals>
+    <plurals name="trial_days_left">
+        <item quantity="other">%1$s trial: %2$d days left</item>
+        <item quantity="one">%1$s trial: %2$d day left</item>
+    </plurals>
+    <plurals name="x_days">
+        <item quantity="other">%1$d days</item>
+        <item quantity="one">%1$d day</item>
+    </plurals>
+    <plurals name="x_devices">
+        <item quantity="other">%1$d devices</item>
+        <item quantity="one">1 device</item>
+    </plurals>
+    <plurals name="x_events">
+        <item quantity="other">%1$d events</item>
+        <item quantity="one">%1$d event</item>
+    </plurals>
+    <plurals name="x_hours">
+        <item quantity="other">%1$d hours</item>
+        <item quantity="one">%1$d hour</item>
+    </plurals>
+    <plurals name="x_hrs">
+        <item quantity="other">%1$d hrs</item>
+        <item quantity="one">%1$d hr</item>
+    </plurals>
+    <plurals name="x_mins">
+        <item quantity="other">%1$d min</item>
+        <item quantity="one">%1$d min</item>
+    </plurals>
+    <plurals name="x_minutes">
+        <item quantity="other">%1$d minutes</item>
+        <item quantity="one">%1$d minute</item>
+    </plurals>
+    <plurals name="x_seconds">
+        <item quantity="other">%1$d seconds</item>
+        <item quantity="one">%1$d second</item>
+    </plurals>
+    <plurals name="x_units">
+        <item quantity="other">%1$d units</item>
+        <item quantity="one">1 unit</item>
+    </plurals>
+    <plurals name="you_have_x_active_basic_plans">
+        <item quantity="other">You have %1$d active Blink Basic Plans.</item>
+        <item quantity="one">You have %1$d active Blink Basic Plan.</item>
+    </plurals>
+    <plurals name="you_have_x_inactive_basic_plans">
+        <item quantity="other">You have %1$d inactive Blink Basic Plans.</item>
+        <item quantity="one">You have %1$d inactive Blink Basic Plan.</item>
+    </plurals>
+</resources>

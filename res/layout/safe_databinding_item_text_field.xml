@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeContentLayout android:tag="layout/safe_databinding_item_text_field_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.textfield.TextField android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.ring.android.safe.container.SafeContentLayout>

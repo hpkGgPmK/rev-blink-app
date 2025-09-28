@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/device_settings_video_photo_root" android:tag="layout/fragment_device_settings_video_photo_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/video_and_photo_settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeScrollView android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ring.android.safe.header.HeaderView android:id="@id/video_settings_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/video_settings" />
+                <com.ring.android.safe.cell.SliderCell android:id="@id/motion_clip_length_cell" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_label="@string/motion_clip_length" app:cell_subText="@string/device_video_settings_motion_clip_length_description" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/recording_length_cell" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/device_video_settings_motion_clip_length_description" app:cell_text="@string/recording_length" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/video_quality_cell" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/device_video_settings_video_quality_description" app:cell_text="@string/video_quality" />
+                <com.ring.android.safe.cell.ToggleCell android:id="@id/end_clip_early_cell" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/device_video_settings_end_clip_early_description" app:cell_text="@string/device_video_settings_end_clip_early_title" />
+                <com.ring.android.safe.cell.ToggleCell android:id="@id/flip_video_cell" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/device_video_settings_flip_video_description" app:cell_text="@string/flip_video" />
+                <com.ring.android.safe.header.HeaderView android:id="@id/night_vision_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/night_vision" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/night_vision_cell" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/device_video_settings_night_vision_description" app:cell_text="@string/night_vision" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/ir_intensity_cell" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.ring.android.safe.header.HeaderView android:id="@id/photo_settings_header" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/photo_settings" />
+                <com.ring.android.safe.cell.ToggleCell android:id="@id/photo_capture_cell" android:tag="binding_9" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/device_photo_settings_photo_capture_description" app:cell_text="@string/photo_capture" />
+                <com.ring.android.safe.cell.ToggleCell android:id="@id/auto_update_thumbnail_cell" android:tag="binding_10" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_buttonText="@string/learn_more" app:cell_subText="@string/device_photo_settings_auto_update_thumbnail_description" app:cell_text="@string/auto_update_thumbnail" />
+            </com.ring.android.safe.container.SafeLinearLayout>
+        </com.ring.android.safe.container.SafeScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</com.ring.android.safe.container.SafeLinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/calloutCardSection" android:background="?colorSurface" android:paddingBottom="@dimen/safe_tutorial_template_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/safe_tutorial_template_padding" android:paddingEnd="@dimen/safe_tutorial_template_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ring.android.safe.card.CalloutCard android:layout_gravity="center" android:id="@id/calloutCard" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

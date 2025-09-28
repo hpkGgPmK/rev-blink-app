@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="?android:colorAccent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/mask">
+        <shape android:shape="oval">
+            <solid android:color="@color/blink_background_deep" />
+            <padding android:left="8.0dip" android:top="8.0dip" android:right="8.0dip" android:bottom="8.0dip" />
+        </shape>
+    </item>
+</ripple>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/device_and_system_settings_root_layout" android:tag="layout/fragment_device_and_system_settings_0" android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/device_and_system_settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.ring.android.safe.container.SafeScrollView android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.header.HeaderView android:id="@id/systems_header" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/systems" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/systems_list" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            <com.ring.android.safe.header.HeaderView android:id="@id/units_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/units" />
+            <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/temperature_units" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/temperature_units" />
+                <com.ring.android.safe.header.HeaderView android:id="@id/updates_header" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/updates" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/device_firmware_update_cell" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/device_firmware_update" />
+                <com.ring.android.safe.header.HeaderView android:id="@id/cloud_clip_storage_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/cloud_clip_storage" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/auto_delete_after_cell" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/auto_delete_after" />
+            </com.ring.android.safe.container.SafeLinearLayout>
+        </LinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+</LinearLayout>

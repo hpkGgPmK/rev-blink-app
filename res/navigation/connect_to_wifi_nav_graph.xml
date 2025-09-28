@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/connect_to_wifi_nav_graph" app:startDestination="@id/discover_device_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <argument android:name="deviceId" android:defaultValue="@null" app:argType="java.lang.Long" app:nullable="true" />
+    <argument android:name="deviceIdentity" android:defaultValue="@null" app:argType="com.immediasemi.blink.common.device.IdentifyDeviceResponse" app:nullable="true" />
+    <argument android:name="serialNumber" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+    <argument android:name="systemId" android:defaultValue="@null" app:argType="java.lang.Long" app:nullable="true" />
+    <argument android:name="source" app:argType="com.immediasemi.blink.common.log.event.OnboardingSource" />
+    <action android:id="@id/exit" app:popUpTo="@id/discover_device_fragment" />
+    <fragment android:name="com.immediasemi.blink.device.wifi.discover.DiscoverDeviceFragment" android:id="@id/discover_device_fragment">
+        <action android:id="@id/navigateToManualConnect" app:destination="@id/manual_connect" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToResetDevice" app:destination="@id/reset_device_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToDiscoverManualConnect" app:destination="@id/discover_device_with_manual_fragment" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.wifi.discover.DiscoverDeviceWithManualFragment" android:id="@id/discover_device_with_manual_fragment">
+        <action android:id="@id/navigateToManualConnect" app:destination="@id/manual_connect" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.wifi.reset.ResetDeviceFragment" android:id="@id/reset_device_fragment">
+        <action android:id="@id/navigateToDiscoverManualConnect" app:destination="@id/discover_device_with_manual_fragment" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.wifi.connect.ManualConnectFragment" android:id="@id/manual_connect">
+        <action android:id="@id/navigateToResetDevice" app:destination="@id/reset_device_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.wifi.select.SelectWifiFragment" android:id="@id/select_wifi_fragment">
+        <action android:id="@id/navigateToOtherWifi" app:destination="@id/other_network_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <argument android:name="accessPoints" app:argType="com.immediasemi.blink.device.wifi.AccessPoints" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.wifi.password.EnterWifiPasswordFragment" android:id="@id/enter_wifi_password_fragment">
+        <action android:id="@id/navigateToDiscoverDevice" app:destination="@id/discover_device_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <argument android:name="accessPoint" app:argType="com.immediasemi.blink.device.wifi.AccessPoint" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.wifi.other.OtherNetworkFragment" android:id="@id/other_network_fragment">
+        <action android:id="@id/navigateToEnterWifiInfo" app:destination="@id/enter_wifi_info_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.wifi.info.EnterWifiInfoFragment" android:id="@id/enter_wifi_info_fragment">
+        <action android:id="@id/navigateToDiscoverDevice" app:destination="@id/discover_device_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <argument android:name="securityType" app:argType="string" />
+    </fragment>
+    <action android:id="@id/navigateToSelectWifi" app:destination="@id/select_wifi_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <action android:id="@id/navigateToConnectToWifi" app:destination="@id/enter_wifi_password_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right">
+        <argument android:name="accessPoint" app:argType="com.immediasemi.blink.device.wifi.AccessPoint" />
+    </action>
+</navigation>

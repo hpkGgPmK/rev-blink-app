@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rosie_settings_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/pan_tilt_settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeScrollView android:id="@id/calibrated_section" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ring.android.safe.area.DescriptionArea android:id="@id/calibrated_description_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_icon="@drawable/ic_rosie_delete_warning" app:area_iconTint="?colorNegativeBase" app:area_subText="@string/rosie_offline_body" app:area_text="@string/pan_tilt_mount_is_offline" />
+            </com.ring.android.safe.container.SafeLinearLayout>
+        </com.ring.android.safe.container.SafeScrollView>
+        <com.ring.android.safe.button.module.StickyButtonModule android:layout_gravity="bottom" android:id="@id/delete_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_buttonStyle="severeMainButton" app:buttonModule_text="@string/delete_pan_tilt_mount" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

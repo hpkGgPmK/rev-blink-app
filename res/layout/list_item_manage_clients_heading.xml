@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:gravity="center_vertical" android:paddingTop="36.0dip" android:paddingBottom="36.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/manage_clients_list_heading" android:paddingStart="24.0dip" android:paddingEnd="24.0dip" style="@style/BodyNormalMedium"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

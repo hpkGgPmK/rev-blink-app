@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/anchorView" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_max="@dimen/tablet_layout_content_width" />
+    <com.ring.android.safe.cell.textfield.SearchField android:id="@id/safeSearchField" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/safe_cell_search_field_top_margin" android:layout_marginBottom="@dimen/safe_cell_search_field_bottom_margin" android:layout_marginStart="@dimen/safe_cell_search_field_horizontal_margin" android:layout_marginEnd="@dimen/safe_cell_search_field_horizontal_margin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@id/anchorView" app:layout_constraintStart_toStartOf="@id/anchorView" app:layout_constraintTop_toTopOf="parent" />
+</merge>

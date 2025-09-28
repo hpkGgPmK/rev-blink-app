@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/contact_preferences_root" android:tag="layout/fragment_contact_preferences_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/contact_preferences" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.ring.android.safe.container.SafeScrollView android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/contact_preferences_description_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_subText="@string/contact_preferences_description_subtext" app:area_text="@string/contact_preferences_description_text" />
+            <Space android:layout_width="fill_parent" android:layout_height="@dimen/spacing_0_75x" />
+            <com.ring.android.safe.cell.ToggleCell android:id="@id/braze_push_notifications_toggle" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/push_notifications" />
+            <com.ring.android.safe.cell.HintCell android:id="@id/contact_preferences_opt_in_hint_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/contact_preferences_hint_text" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+</com.ring.android.safe.container.SafeLinearLayout>

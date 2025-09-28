@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/batteries_onboarding_nav_graph" app:startDestination="@id/remove_battery_cover_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.battery.RemoveBatteryCoverFragment" android:id="@id/remove_battery_cover_fragment">
+        <action android:id="@id/navigateToInsertBatteries" app:destination="@id/insert_batteries_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.battery.InsertBatteriesFragment" android:id="@id/insert_batteries_fragment" />
+</navigation>

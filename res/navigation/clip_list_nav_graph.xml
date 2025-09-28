@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/clip_list_nav_graph" app:startDestination="@id/clip_list"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <action android:id="@id/navigateToCLipListFragment" app:destination="@id/clip_list" app:popUpTo="@id/clip_list" app:popUpToInclusive="true" />
+    <fragment android:label="Clip List V2" android:name="com.immediasemi.blink.video.clip.ClipListFragment" android:id="@id/clip_list">
+        <action android:id="@id/navigateToSelectStorageDialog" app:destination="@id/select_storage_dialog" />
+        <action android:id="@id/navigateToFilterFragment" app:destination="@id/clip_list_filter_fragment" app:enterAnim="@anim/enter_up" app:popExitAnim="@anim/exit_down" />
+        <action android:id="@id/navigateToMomentsTutorialCleanupFragment" app:destination="@id/moments_tutorial_cleanup_fragment" app:enterAnim="@anim/enter_up" app:popExitAnim="@anim/exit_down" />
+        <action android:id="@id/navigateToDeviceSettingsPrivacyFragment" app:destination="@id/device_settings_privacy_fragment" />
+        <action android:id="@id/navigateToSubscriptionUpgradedFragment" app:destination="@id/subscription_upgrade_fragment" />
+        <action android:id="@id/navigateToPlusPlanBenefitsUpsellFragment" app:destination="@id/plus_plan_benefits_upsell_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right">
+            <argument android:name="messagePriority" app:argType="long" />
+        </action>
+    </fragment>
+    <dialog android:label="SelectStorageDialog" android:name="com.immediasemi.blink.video.clip.storage.SelectStorageDialogFragment" android:id="@id/select_storage_dialog" />
+    <fragment android:label="ClipListFilterFragment" android:name="com.immediasemi.blink.video.clip.filter.ClipListFilterFragment" android:id="@id/clip_list_filter_fragment" />
+    <fragment android:label="device_settings_privacy_fragment" android:name="com.immediasemi.blink.device.setting.DeviceSettingsPrivacyFragment" android:id="@id/device_settings_privacy_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+    </fragment>
+    <fragment android:label="moments_tutorial_cleanup_fragment" android:name="com.immediasemi.blink.video.clip.moment.tutorial.MomentsTutorialCleanupFragment" android:id="@id/moments_tutorial_cleanup_fragment">
+        <action android:id="@id/navigateToMomentsTutorialPlaybackFragment" app:destination="@id/moments_tutorial_playback_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="moments_tutorial_playback_fragment" android:name="com.immediasemi.blink.video.clip.moment.tutorial.MomentsTutorialPlaybackFragment" android:id="@id/moments_tutorial_playback_fragment">
+        <action android:id="@id/navigateToMomentsTutorialDetailsFragment" app:destination="@id/moments_tutorial_details_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="moments_tutorial_details_fragment" android:name="com.immediasemi.blink.video.clip.moment.tutorial.MomentsTutorialDetailsFragment" android:id="@id/moments_tutorial_details_fragment" />
+    <fragment android:name="com.immediasemi.blink.settings.subscription.plus.PlusPlanBenefitsUpsellFragment" android:id="@id/plus_plan_benefits_upsell_fragment">
+        <argument android:name="messagePriority" android:defaultValue="0L" app:argType="long" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.common.subscription.SubscriptionUpgradeFragment" android:id="@id/subscription_upgrade_fragment" />
+</navigation>

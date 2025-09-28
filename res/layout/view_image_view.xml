@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@android:color/transparent" android:id="@id/urlLocator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+    <Space android:id="@id/imageFrame" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="16:9" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_max="@dimen/safe_image_view_max_width" />
+    <com.google.android.material.imageview.ShapeableImageView android:id="@id/imageView" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/imageFrame" app:layout_constraintEnd_toEndOf="@id/imageFrame" app:layout_constraintStart_toStartOf="@id/imageFrame" app:layout_constraintTop_toTopOf="@id/imageFrame" />
+    <FrameLayout android:id="@id/reloadGroup" android:background="?colorBackgroundDeep" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" android:contentDescription="@string/safe_image_retry_btn_content_description" app:layout_constraintBottom_toBottomOf="@id/imageFrame" app:layout_constraintEnd_toEndOf="@id/imageFrame" app:layout_constraintStart_toStartOf="@id/imageFrame" app:layout_constraintTop_toTopOf="@id/imageFrame">
+        <ImageView android:layout_gravity="center" android:id="@id/reloadIcon" android:layout_width="@dimen/safe_image_view_reload_icon_size" android:layout_height="@dimen/safe_image_view_reload_icon_size" android:src="@drawable/refresh" android:contentDescription="@null" app:tint="?colorPrimaryBase" />
+    </FrameLayout>
+</merge>

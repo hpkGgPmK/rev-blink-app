@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/lotus_chime_box_connection" app:startDestination="@id/confirmTransformerCompatibility"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.ConfirmTransformerCompatibilityFragment" android:id="@id/confirmTransformerCompatibility">
+        <action android:id="@id/action_confirmTransformerCompatibility_to_wiringStep" app:destination="@id/wiringStep" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.WiringStepFragment" android:id="@id/wiringStep">
+        <argument android:name="step" app:argType="com.immediasemi.blink.adddevice.lotus.WiringStep" app:nullable="false" />
+        <action android:id="@id/action_wiringStep_to_wiringStep" app:destination="@id/wiringStep" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_wiringStep_to_checkLotusConnections" app:destination="@id/checkLotusConnections" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_wiringStep_to_ringDoorbellToWake" app:destination="@id/ringDoorbellToWake" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <include app:graph="@navigation/lotus_chime_config" />
+    <fragment android:label="@string/wake_up_doorbell" android:name="com.immediasemi.blink.adddevice.lotus.RingDoorbellToWakeFragment" android:id="@id/ringDoorbellToWake">
+        <action android:id="@id/action_ringDoorbellToWake_to_lotusNotConnected" app:destination="@id/lotusNotConnected" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_ringDoorbellToWake_to_lotusConnected" app:destination="@id/lotusConnected" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.CheckLotusConnectionsFragment" android:id="@id/checkLotusConnections">
+        <action android:id="@id/action_checkLotusConnections_to_lotusNotConnected" app:destination="@id/lotusNotConnected" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_checkLotusConnections_to_lotusConnected" app:destination="@id/lotusConnected" />
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.LotusConnectedFragment" android:id="@id/lotusConnected">
+        <action android:id="@id/action_lotusConnected_to_lotusChimeConfig" app:destination="@id/lotusChimeConfig" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right">
+            <argument android:name="networkId" app:argType="long" app:nullable="false" />
+            <argument android:name="lotusId" app:argType="long" app:nullable="false" />
+        </action>
+    </fragment>
+    <fragment android:label="@string/doorbell_setup" android:name="com.immediasemi.blink.adddevice.lotus.LotusNotConnectedFragment" android:id="@id/lotusNotConnected">
+        <action android:id="@id/action_lotusNotConnected_to_checkLotusConnections" app:destination="@id/checkLotusConnections" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/checkLotusConnections" app:popUpToInclusive="true" />
+        <action android:id="@id/action_lotusNotConnected_to_ringDoorbellToWake" app:destination="@id/ringDoorbellToWake" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/ringDoorbellToWake" app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

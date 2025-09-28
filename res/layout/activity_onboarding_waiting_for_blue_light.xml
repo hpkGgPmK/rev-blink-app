@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/container" android:background="@color/blink_surface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar_container" layout="@layout/left_aligned_toolbar" />
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <FrameLayout android:background="@color/blink_surface" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar_container">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/blue_light_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                        <FrameLayout android:id="@id/blue_circle_container" android:layout_width="24.0dip" android:layout_height="24.0dip">
+                            <View android:id="@id/blue_circle_filled" android:background="@drawable/onboarding_led_filled" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                            <View android:id="@id/blue_circle" android:background="@drawable/onboarding_led_empty" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                        </FrameLayout>
+                        <TextView android:textColor="@color/blink_content_base" android:id="@id/blue_light_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/blinking_blue" android:layout_marginStart="12.0dip" style="@style/TextAppearance.Blink.Navbar.Button.Medium" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/green_light_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/blue_light_layout">
+                        <View android:id="@id/green_circle" android:background="@drawable/onboarding_led_filled" android:layout_width="24.0dip" android:layout_height="24.0dip" android:backgroundTint="@color/blink_positive_base" />
+                        <TextView android:textColor="@color/blink_content_base" android:id="@id/green_light_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/steady_green" android:layout_marginStart="12.0dip" style="@style/TextAppearance.Blink.Navbar.Button.Medium" />
+                    </LinearLayout>
+                    <TextView android:textColor="@color/blink_content_base" android:id="@id/discover_device" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="78.0dip" android:text="@string/discover_device" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/green_light_layout" style="@style/TextAppearance.Blink.Title" />
+                    <TextView android:textColor="@color/blink_content_base" android:id="@id/plug_in_device_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/plug_in_device_and_wait" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/discover_device" style="@style/TextAppearance.Blink.Body.Normal.Light" />
+                    <TextView android:textColor="@color/blink_content_base" android:id="@id/lights_not_ready_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/plug_in_device_text" style="@style/TextAppearance.Blink.Body.Normal.Light" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <com.immediasemi.blink.views.ProgressLayout android:id="@id/progress_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.VerticalButtonModule android:layout_gravity="bottom" android:id="@id/blue_light_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_bottomText="@string/help_not_blinking_blue" app:buttonModule_topText="@string/discover_device" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

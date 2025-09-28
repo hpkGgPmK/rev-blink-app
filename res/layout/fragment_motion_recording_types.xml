@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:tag="layout/fragment_motion_recording_types_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/motion_recording_types" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.ring.android.safe.container.SafeScrollView android:id="@id/content_container" android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <com.ring.android.safe.container.SafeLinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/description_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_subText="@string/record_types_header_subtitle" app:area_text="@string/motion_recording_types" />
+            <com.ring.android.safe.header.HeaderView android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/what_to_record" />
+            <com.ring.android.safe.container.RadioGroup android:id="@id/record_group" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/record_all_motion" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_checkable="true" app:cell_icon="@drawable/ic_radio_box" app:cell_iconTint="@color/checkable_color" app:cell_subText="@string/record_types_all_motion_subtext" app:cell_text="@string/all_motion" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/record_person_detection" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_buttonEnabled="true" app:cell_checkable="true" app:cell_icon="@drawable/ic_radio_box" app:cell_iconTint="@color/checkable_color" app:cell_subText="@string/record_types_person_detection_subtext" app:cell_text="@string/person_detection" />
+            </com.ring.android.safe.container.RadioGroup>
+            <Space android:layout_width="fill_parent" android:layout_height="@dimen/spacing_1x" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.StickyButtonModule android:layout_gravity="bottom" android:id="@id/save_motion_settings" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_buttonStyle="defaultMainButton" app:buttonModule_text="@string/save" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

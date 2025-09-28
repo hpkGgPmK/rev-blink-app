@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/root_container" android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.template.TemplateToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+    <com.ring.android.safe.container.SafeScrollView android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <com.ring.android.safe.container.SafeLinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/media_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.image.ImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="wrap_content" app:imageView_srcDrawable="@drawable/holding_phone_on_desk" />
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/description_area" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ring.android.safe.card.CalloutCard android:id="@id/callout_card" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip" app:card_backgroundColor="@color/blink_primary_muted" app:card_iconSrc="@drawable/info_filled" app:card_iconTint="@color/blink_primary_base" app:card_subtext="@string/lv_extended_save_clip_unavailable" app:card_text="@string/save_clip_unavailable" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

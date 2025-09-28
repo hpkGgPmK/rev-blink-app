@@ -1,0 +1,2 @@
+ALTER TABLE siren ADD COLUMN battery TEXT;
+ALTER TABLE siren ADD COLUMN status TEXT;

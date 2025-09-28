@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="196.0dip" android:width="196.0dip" android:viewportWidth="196.0" android:viewportHeight="196.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/blink_background_deep" android:pathData="M98,98m-98,0a98,98 0,1 1,196 0a98,98 0,1 1,-196 0" />
+    <path android:fillColor="#00000000" android:pathData="M98,98m-97.5,0a97.5,97.5 0,1 1,195 0a97.5,97.5 0,1 1,-195 0" android:strokeColor="@color/blink_content_disabled" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/blink_content_disabled" android:pathData="M98,17L108,27.08L106.09,29L98,20.84L89.9,29L88,27.08L98,17Z" />
+    <path android:fillColor="@color/blink_content_disabled" android:pathData="M98,179L88,168.92L89.9,167L98,175.16L106.09,167L108,168.92L98,179Z" />
+    <path android:fillColor="@color/blink_content_disabled" android:pathData="M17,98L27.08,88L29,89.9L20.84,98L29,106.09L27.08,108L17,98Z" />
+    <path android:fillColor="@color/blink_content_disabled" android:pathData="M179,98L168.92,108L167,106.1L175.16,98L167,89.91L168.92,88L179,98Z" />
+</vector>

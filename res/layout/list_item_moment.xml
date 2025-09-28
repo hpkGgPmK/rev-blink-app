@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/media_root" android:tag="layout/list_item_moment_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatCheckBox android:layout_gravity="center" android:id="@id/media_check_box" android:tag="binding_1" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkmark" android:layout_marginStart="@dimen/spacing_1x" />
+    <com.immediasemi.blink.common.view.MomentCell android:id="@id/moment_cell" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

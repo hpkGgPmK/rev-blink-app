@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/chime_type_buttons" app:layout_constraintTop_toTopOf="parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/chime_type_header" android:paddingTop="@dimen/lotus_onboarding_double_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_text="@string/chime_type_header" />
+            <com.ring.android.safe.container.RadioGroup android:id="@id/chime_radio_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lotus_onboarding_double_margin">
+                <com.ring.android.safe.cell.IconValueCell android:textSize="@dimen/lotus_onboarding_header" android:textStyle="bold" android:id="@id/mechanical_chime_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_checkable="true" app:cell_icon="@drawable/ic_radio_box" app:cell_iconTint="@color/checkable_color" app:cell_subText="@string/mechanical_chime_description" app:cell_text="@string/mechanical_chime" app:cell_textColor="@color/blink_primary_base" />
+                <com.ring.android.safe.cell.IconValueCell android:textSize="@dimen/lotus_onboarding_header" android:textStyle="bold" android:id="@id/digital_chime_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_checkable="true" app:cell_icon="@drawable/ic_radio_box" app:cell_iconTint="@color/checkable_color" app:cell_subText="@string/digital_chime_description" app:cell_text="@string/digital_chime" app:cell_textColor="@color/blink_primary_base" />
+            </com.ring.android.safe.container.RadioGroup>
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.VerticalButtonModule android:layout_gravity="bottom" android:id="@id/chime_type_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_bottomText="@string/unsure_of_chime" app:buttonModule_topBtnEnabled="false" app:buttonModule_topText="@string/continue_" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

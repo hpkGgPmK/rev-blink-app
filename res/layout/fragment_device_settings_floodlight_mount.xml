@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/device_settings_floodlight_mount_root" android:tag="layout/fragment_device_settings_floodlight_mount_0" android:background="?colorBackgroundSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/lighting_settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ring.android.safe.cell.RightIconCell android:id="@id/battery_level_cell" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/battery_level" />
+                <com.ring.android.safe.cell.SliderCell android:id="@id/light_brightness_cell" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_label="@string/light_brightness" app:cell_sliderIconEnd="@drawable/exposure_high_brightness_high_" app:cell_sliderIconEndTint="?colorPrimaryBase" app:cell_sliderIconStart="@drawable/exposure_low_brightness_low_" app:cell_sliderIconStartTint="?colorPrimaryBase" />
+                <com.ring.android.safe.cell.ToggleCell android:id="@id/motion_activation_cell" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/device_floodlight_settings_motion_activation_description" app:cell_text="@string/motion_activation" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/timeout_after_motion_activation_cell" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/superior_shut_off_motion_description" app:cell_text="@string/superior_shut_off_motion" />
+                <com.ring.android.safe.cell.ToggleCell android:id="@id/daylight_mode_cell" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/storm_daylight_mode_description" app:cell_text="@string/daylight_mode" />
+                <com.ring.android.safe.cell.SliderCell android:id="@id/daylight_sensitivity_cell" android:tag="binding_6" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_label="@string/daylight_sensitivity" app:cell_subText="@string/storm_daylight_sensitivity_description" />
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/firmware_cell" android:tag="binding_7" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/firmware" />
+            </com.ring.android.safe.container.SafeLinearLayout>
+        </com.ring.android.safe.container.SafeScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</com.ring.android.safe.container.SafeLinearLayout>

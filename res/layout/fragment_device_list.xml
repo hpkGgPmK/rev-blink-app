@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/blink_surface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar_container" layout="@layout/left_aligned_toolbar" />
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cameras_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:gravity="bottom" android:id="@id/cameras_text_box" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/cameras" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:layout_constraintTop_toTopOf="parent" style="@style/TextBoxPrimary" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/camera_list_recycler_view" android:paddingTop="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:overScrollMode="never" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/cameras_text_box" app:layout_constraintVertical_bias="1.0" />
+            <View android:background="@color/blink_pale_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" app:layout_constraintTop_toBottomOf="@id/camera_list_recycler_view" />
+            <TextView android:textColor="@color/blink_pale_grey" android:id="@id/drag_to_sort_text_box" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hold_and_drag_camera_names_to_sort" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/camera_list_recycler_view" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

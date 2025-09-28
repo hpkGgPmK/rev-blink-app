@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/container" android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.image.ImageView android:id="@id/setup_complete_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/lotus_installation_complete" app:imageView_aspectRatio="3:2" app:imageView_scaleType="centerCrop" app:imageView_srcDrawable="@drawable/lotus_connected" app:layout_constraintTop_toTopOf="parent" />
+    <com.ring.android.safe.area.DescriptionArea android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/setup_complete_image" />
+    <com.ring.android.safe.button.module.StickyButtonModule android:id="@id/done_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/lotus_onboarding_margin" android:layout_marginEnd="@dimen/lotus_onboarding_margin" app:buttonModule_text="@string/done" app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

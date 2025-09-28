@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textColor="?colorPrimaryBase" android:id="@id/countryPhoneTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:paddingStart="16.0dip" android:paddingEnd="8.0dip" style="?safeBodyNormalMediumStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

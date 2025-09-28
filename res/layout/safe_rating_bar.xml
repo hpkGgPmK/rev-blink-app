@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/star1" android:layout_width="@dimen/safe_star_icon_size" android:layout_height="@dimen/safe_star_icon_size" android:src="@drawable/star" android:importantForAccessibility="no" app:tint="?colorAmazonOrange" />
+    <ImageView android:id="@id/star2" android:layout_width="@dimen/safe_star_icon_size" android:layout_height="@dimen/safe_star_icon_size" android:src="@drawable/star" android:importantForAccessibility="no" app:tint="?colorAmazonOrange" />
+    <ImageView android:id="@id/star3" android:layout_width="@dimen/safe_star_icon_size" android:layout_height="@dimen/safe_star_icon_size" android:src="@drawable/star" android:importantForAccessibility="no" app:tint="?colorAmazonOrange" />
+    <ImageView android:id="@id/star4" android:layout_width="@dimen/safe_star_icon_size" android:layout_height="@dimen/safe_star_icon_size" android:src="@drawable/star" android:importantForAccessibility="no" app:tint="?colorAmazonOrange" />
+    <ImageView android:id="@id/star5" android:layout_width="@dimen/safe_star_icon_size" android:layout_height="@dimen/safe_star_icon_size" android:src="@drawable/star" android:importantForAccessibility="no" app:tint="?colorAmazonOrange" />
+    <TextView android:id="@id/label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" android:layout_marginStart="4.0dip" style="?safeBodyFootnoteMediumStyle" />
+</merge>

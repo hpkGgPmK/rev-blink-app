@@ -1,0 +1,36 @@
+.class public final synthetic Lcom/immediasemi/blink/settings/account/alexa/AlexaLinkingFragment$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function0;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/immediasemi/blink/settings/account/alexa/AlexaLinkingFragment;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/immediasemi/blink/settings/account/alexa/AlexaLinkingFragment;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/immediasemi/blink/settings/account/alexa/AlexaLinkingFragment$$ExternalSyntheticLambda0;->f$0:Lcom/immediasemi/blink/settings/account/alexa/AlexaLinkingFragment;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lcom/immediasemi/blink/settings/account/alexa/AlexaLinkingFragment$$ExternalSyntheticLambda0;->f$0:Lcom/immediasemi/blink/settings/account/alexa/AlexaLinkingFragment;
+
+    invoke-static {v0}, Lcom/immediasemi/blink/settings/account/alexa/AlexaLinkingFragment;->$r8$lambda$l1yD2-zlPAdxkkOOxqoAt3sE9wM(Lcom/immediasemi/blink/settings/account/alexa/AlexaLinkingFragment;)Lkotlin/Unit;
+
+    move-result-object v0
+
+    return-object v0
+.end method

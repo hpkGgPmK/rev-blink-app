@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:tag="layout/fragment_local_storage_clip_backup_0" android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/local_storage" />
+    <FrameLayout android:id="@id/twizzler_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/clip_backup_description_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_buttonText="@string/learn_about_clip_backup" app:area_icon="@drawable/camera_backup" app:area_iconTint="@color/blink_primary_base" app:area_subText="@string/clip_backup_description" app:area_text="@string/clip_backup_title" />
+            <com.ring.android.safe.card.CalloutCard android:id="@id/clip_backup_failed_callout_card" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginHorizontal="@dimen/standard_margin" app:card_backgroundColor="@color/blink_negative_muted" />
+            <com.ring.android.safe.header.HeaderView android:id="@id/devices_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/devices" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/clip_backup_devices_list" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="LinearLayoutManager" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+</com.ring.android.safe.container.SafeLinearLayout>

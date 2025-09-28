@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="@color/blink_surface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/blink_content_base" android:id="@id/title_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="24.0dip" android:text="@string/create_a_new_system" style="@style/TextAppearance.Blink.Title" />
+            <com.ring.android.safe.textfield.TextField android:id="@id/system_name_text_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" app:textfield_helperText="@string/system_name_helper_text" app:textfield_hint="@string/name_your_system" app:textfield_imeOptions="actionDone" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.StickyButtonModule android:layout_gravity="bottom" android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_text="@string/continue_" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

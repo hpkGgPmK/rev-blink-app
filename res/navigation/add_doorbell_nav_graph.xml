@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/add_doorbell_nav_graph" app:startDestination="@id/wait_until_led_red_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.add.WaitUntilLedRedFragment" android:id="@id/wait_until_led_red_fragment">
+        <action android:id="@id/navigateToResetDoorbell" app:destination="@id/reset_doorbell_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToNotFindingDoorbell" app:destination="@id/not_finding_doorbell_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToDoorbellAdded" app:destination="@id/doorbell_added_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToCustomerService" app:destination="@id/customer_service_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.add.ResetDoorbellFragment" android:id="@id/reset_doorbell_fragment">
+        <action android:id="@id/navigateToNotFindingDoorbell" app:destination="@id/not_finding_doorbell_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToWaitUntilLedRed" app:destination="@id/wait_until_led_red_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToCustomerService" app:destination="@id/customer_service_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.add.NotFindingDoorbellFragment" android:id="@id/not_finding_doorbell_fragment">
+        <action android:id="@id/navigateToResetDoorbell" app:destination="@id/reset_doorbell_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToDoorbellAdded" app:destination="@id/doorbell_added_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToCustomerService" app:destination="@id/customer_service_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.add.DoorbellAddedFragment" android:id="@id/doorbell_added_fragment" />
+    <fragment android:name="com.immediasemi.blink.settings.CustomerServiceFragment" android:id="@id/customer_service_fragment" />
+</navigation>

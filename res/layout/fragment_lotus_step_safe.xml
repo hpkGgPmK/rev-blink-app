@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:paddingBottom="@dimen/lotus_onboarding_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.image.ImageView android:id="@id/lotus_step_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/doorbell_setup" app:imageView_aspectRatio="3:2" app:imageView_scaleType="centerCrop" />
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/lotus_step_area" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ring.android.safe.cell.IconValueCell android:gravity="start" android:id="@id/lotus_step_warning" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/banner_caution" app:cell_iconTint="@color/blink_secondary_500" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.StickyButtonModule android:layout_gravity="bottom" android:id="@id/lotus_step_button" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_text="@string/continue_" />
+    <com.ring.android.safe.button.module.VerticalButtonModule android:layout_gravity="bottom" android:id="@id/lotus_step_buttons" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_topText="@string/yes" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

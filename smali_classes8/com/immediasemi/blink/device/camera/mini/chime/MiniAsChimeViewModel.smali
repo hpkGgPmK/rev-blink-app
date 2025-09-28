@@ -1,0 +1,363 @@
+.class public final Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;
+.super Lcom/immediasemi/blink/core/viewmodel/BaseViewModel;
+.source "MiniAsChimeViewModel.kt"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000N\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0003\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0005\u0008\u0007\u0018\u00002\u00020\u0001B!\u0008\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u0006\u0010\u001d\u001a\u00020\u001aJ\u0006\u0010\u001e\u001a\u00020\u001aR\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u000c\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e0\rX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001d\u0010\u0010\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e0\u0011\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0012\u0010\u0013R\u0014\u0010\u0014\u001a\u0008\u0012\u0004\u0012\u00020\u00150\rX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0017\u0010\u0016\u001a\u0008\u0012\u0004\u0012\u00020\u00150\u0011\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0017\u0010\u0013R\u0014\u0010\u0018\u001a\u0008\u0012\u0004\u0012\u00020\u001a0\u0019X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0017\u0010\u001b\u001a\u0008\u0012\u0004\u0012\u00020\u001a0\u0011\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001c\u0010\u0013\u00a8\u0006\u001f"
+    }
+    d2 = {
+        "Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;",
+        "Lcom/immediasemi/blink/core/viewmodel/BaseViewModel;",
+        "deviceModules",
+        "Lcom/immediasemi/blink/common/device/module/DeviceModules;",
+        "doorbellService",
+        "Lcom/immediasemi/blink/common/device/camera/doorbell/DoorbellService;",
+        "savedStateHandle",
+        "Landroidx/lifecycle/SavedStateHandle;",
+        "<init>",
+        "(Lcom/immediasemi/blink/common/device/module/DeviceModules;Lcom/immediasemi/blink/common/device/camera/doorbell/DoorbellService;Landroidx/lifecycle/SavedStateHandle;)V",
+        "doorbellId",
+        "",
+        "_minis",
+        "Landroidx/lifecycle/SingleLiveEvent;",
+        "",
+        "Lcom/immediasemi/blink/common/device/camera/wired/ChimeCamera;",
+        "minis",
+        "Landroidx/lifecycle/LiveData;",
+        "getMinis",
+        "()Landroidx/lifecycle/LiveData;",
+        "_errors",
+        "",
+        "errors",
+        "getErrors",
+        "_minisSaved",
+        "Landroidx/lifecycle/MutableLiveData;",
+        "",
+        "minisSaved",
+        "getMinisSaved",
+        "loadChimeCameras",
+        "saveChimeCameras",
+        "blink-47.2-990d8034d-hotfix-47.2_fullRelease"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final $stable:I = 0x8
+
+
+# instance fields
+.field private final _errors:Landroidx/lifecycle/SingleLiveEvent;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/lifecycle/SingleLiveEvent<",
+            "Ljava/lang/Throwable;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final _minis:Landroidx/lifecycle/SingleLiveEvent;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/lifecycle/SingleLiveEvent<",
+            "Ljava/util/List<",
+            "Lcom/immediasemi/blink/common/device/camera/wired/ChimeCamera;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private final _minisSaved:Landroidx/lifecycle/MutableLiveData;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/lifecycle/MutableLiveData<",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final deviceModules:Lcom/immediasemi/blink/common/device/module/DeviceModules;
+
+.field private final doorbellId:J
+
+.field private final doorbellService:Lcom/immediasemi/blink/common/device/camera/doorbell/DoorbellService;
+
+.field private final errors:Landroidx/lifecycle/LiveData;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/lifecycle/LiveData<",
+            "Ljava/lang/Throwable;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final minis:Landroidx/lifecycle/LiveData;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/lifecycle/LiveData<",
+            "Ljava/util/List<",
+            "Lcom/immediasemi/blink/common/device/camera/wired/ChimeCamera;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private final minisSaved:Landroidx/lifecycle/LiveData;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/lifecycle/LiveData<",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/immediasemi/blink/common/device/module/DeviceModules;Lcom/immediasemi/blink/common/device/camera/doorbell/DoorbellService;Landroidx/lifecycle/SavedStateHandle;)V
+    .locals 1
+    .annotation runtime Ljavax/inject/Inject;
+    .end annotation
+
+    const-string v0, "deviceModules"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "doorbellService"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "savedStateHandle"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/immediasemi/blink/core/viewmodel/BaseViewModel;-><init>()V
+
+    iput-object p1, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->deviceModules:Lcom/immediasemi/blink/common/device/module/DeviceModules;
+
+    iput-object p2, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->doorbellService:Lcom/immediasemi/blink/common/device/camera/doorbell/DoorbellService;
+
+    invoke-static {p3}, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeSettingsFragmentArgs;->fromSavedStateHandle(Landroidx/lifecycle/SavedStateHandle;)Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeSettingsFragmentArgs;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeSettingsFragmentArgs;->getLotusId()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->doorbellId:J
+
+    new-instance p1, Landroidx/lifecycle/SingleLiveEvent;
+
+    invoke-direct {p1}, Landroidx/lifecycle/SingleLiveEvent;-><init>()V
+
+    iput-object p1, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->_minis:Landroidx/lifecycle/SingleLiveEvent;
+
+    check-cast p1, Landroidx/lifecycle/LiveData;
+
+    iput-object p1, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->minis:Landroidx/lifecycle/LiveData;
+
+    new-instance p1, Landroidx/lifecycle/SingleLiveEvent;
+
+    invoke-direct {p1}, Landroidx/lifecycle/SingleLiveEvent;-><init>()V
+
+    iput-object p1, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->_errors:Landroidx/lifecycle/SingleLiveEvent;
+
+    check-cast p1, Landroidx/lifecycle/LiveData;
+
+    iput-object p1, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->errors:Landroidx/lifecycle/LiveData;
+
+    new-instance p1, Landroidx/lifecycle/MutableLiveData;
+
+    invoke-direct {p1}, Landroidx/lifecycle/MutableLiveData;-><init>()V
+
+    iput-object p1, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->_minisSaved:Landroidx/lifecycle/MutableLiveData;
+
+    check-cast p1, Landroidx/lifecycle/LiveData;
+
+    iput-object p1, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->minisSaved:Landroidx/lifecycle/LiveData;
+
+    return-void
+.end method
+
+.method public static final synthetic access$getDeviceModules$p(Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;)Lcom/immediasemi/blink/common/device/module/DeviceModules;
+    .locals 0
+
+    iget-object p0, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->deviceModules:Lcom/immediasemi/blink/common/device/module/DeviceModules;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getDoorbellId$p(Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;)J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->doorbellId:J
+
+    return-wide v0
+.end method
+
+.method public static final synthetic access$getDoorbellService$p(Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;)Lcom/immediasemi/blink/common/device/camera/doorbell/DoorbellService;
+    .locals 0
+
+    iget-object p0, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->doorbellService:Lcom/immediasemi/blink/common/device/camera/doorbell/DoorbellService;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$get_errors$p(Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;)Landroidx/lifecycle/SingleLiveEvent;
+    .locals 0
+
+    iget-object p0, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->_errors:Landroidx/lifecycle/SingleLiveEvent;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$get_minis$p(Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;)Landroidx/lifecycle/SingleLiveEvent;
+    .locals 0
+
+    iget-object p0, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->_minis:Landroidx/lifecycle/SingleLiveEvent;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$get_minisSaved$p(Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;)Landroidx/lifecycle/MutableLiveData;
+    .locals 0
+
+    iget-object p0, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->_minisSaved:Landroidx/lifecycle/MutableLiveData;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final getErrors()Landroidx/lifecycle/LiveData;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/lifecycle/LiveData<",
+            "Ljava/lang/Throwable;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->errors:Landroidx/lifecycle/LiveData;
+
+    return-object v0
+.end method
+
+.method public final getMinis()Landroidx/lifecycle/LiveData;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/lifecycle/LiveData<",
+            "Ljava/util/List<",
+            "Lcom/immediasemi/blink/common/device/camera/wired/ChimeCamera;",
+            ">;>;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->minis:Landroidx/lifecycle/LiveData;
+
+    return-object v0
+.end method
+
+.method public final getMinisSaved()Landroidx/lifecycle/LiveData;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/lifecycle/LiveData<",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;->minisSaved:Landroidx/lifecycle/LiveData;
+
+    return-object v0
+.end method
+
+.method public final loadChimeCameras()V
+    .locals 7
+
+    move-object v0, p0
+
+    check-cast v0, Landroidx/lifecycle/ViewModel;
+
+    invoke-static {v0}, Landroidx/lifecycle/ViewModelKt;->getViewModelScope(Landroidx/lifecycle/ViewModel;)Lkotlinx/coroutines/CoroutineScope;
+
+    move-result-object v1
+
+    new-instance v0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel$loadChimeCameras$1;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, v2}, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel$loadChimeCameras$1;-><init>(Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;Lkotlin/coroutines/Continuation;)V
+
+    move-object v4, v0
+
+    check-cast v4, Lkotlin/jvm/functions/Function2;
+
+    const/4 v5, 0x3
+
+    const/4 v6, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
+
+    return-void
+.end method
+
+.method public final saveChimeCameras()V
+    .locals 7
+
+    move-object v0, p0
+
+    check-cast v0, Landroidx/lifecycle/ViewModel;
+
+    invoke-static {v0}, Landroidx/lifecycle/ViewModelKt;->getViewModelScope(Landroidx/lifecycle/ViewModel;)Lkotlinx/coroutines/CoroutineScope;
+
+    move-result-object v1
+
+    new-instance v0, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel$saveChimeCameras$1;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, v2}, Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel$saveChimeCameras$1;-><init>(Lcom/immediasemi/blink/device/camera/mini/chime/MiniAsChimeViewModel;Lkotlin/coroutines/Continuation;)V
+
+    move-object v4, v0
+
+    check-cast v4, Lkotlin/jvm/functions/Function2;
+
+    const/4 v5, 0x3
+
+    const/4 v6, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
+
+    return-void
+.end method

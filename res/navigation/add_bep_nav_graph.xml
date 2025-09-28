@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/add_bep_nav_graph" app:startDestination="@id/bepInsertBatteriesFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.immediasemi.blink.adddevice.batteryextensionpack.InsertBatteriesFragment" android:id="@id/bepInsertBatteriesFragment">
+        <action android:id="@id/navigateToOutdoorOnAccountFragment" app:destination="@id/bepOutdoorOnAccountFragment" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.adddevice.batteryextensionpack.OutdoorOnAccountFragment" android:id="@id/bepOutdoorOnAccountFragment">
+        <action android:id="@id/navigateToSelectOutdoorFragment" app:destination="@id/bepSelectOutdoorFragment" />
+    </fragment>
+    <fragment android:label="@string/add_device" android:name="com.immediasemi.blink.adddevice.batteryextensionpack.SelectOutdoorFragment" android:id="@id/bepSelectOutdoorFragment">
+        <action android:id="@id/navigateToRemoveOutdoorBatteries" app:destination="@id/bepRemoveOutdoorBatteries" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.adddevice.batteryextensionpack.RemoveOutdoorBatteriesFragment" android:id="@id/bepRemoveOutdoorBatteries">
+        <action android:id="@id/navigateToInsertBEP" app:destination="@id/bepInsertBEP" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.adddevice.batteryextensionpack.InsertBEPFragment" android:id="@id/bepInsertBEP">
+        <action android:id="@id/navigateToSecureBackCover" app:destination="@id/bepSecureBackCover" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.adddevice.batteryextensionpack.SecureBackCoverFragment" android:id="@id/bepSecureBackCover">
+        <action android:id="@id/navigateToAddBEPSuccess" app:destination="@id/bepAddedSuccess" />
+        <action android:id="@id/navigateToAddBEPFailure" app:destination="@id/bepAddedFailure" app:launchSingleTop="true" app:popUpTo="@id/bepInsertBatteriesFragment" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:label="@string/add_device" android:name="com.immediasemi.blink.adddevice.batteryextensionpack.AddedSuccessFragment" android:id="@id/bepAddedSuccess" />
+    <fragment android:label="@string/add_device" android:name="com.immediasemi.blink.adddevice.batteryextensionpack.AddedFailureFragment" android:id="@id/bepAddedFailure" />
+</navigation>

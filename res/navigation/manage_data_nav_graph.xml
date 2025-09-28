@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/manage_data_nav_graph" app:startDestination="@id/manageDataFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.immediasemi.blink.settings.account.managedata.ManageDataFragment" android:id="@id/manageDataFragment">
+        <action android:id="@id/navigateToManage3PAccessFragment" app:destination="@id/manage3PAccess" app:enterAnim="@anim/enter_from_right" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToSubmitDsarRequest" app:destination="@id/submitDsarRequestFragment" app:enterAnim="@anim/enter_from_right" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToSubmitEudaRequest" app:destination="@id/submitEudaRequestFragment" app:enterAnim="@anim/enter_from_right" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.account.managedata.thirdparty.Manage3PAccessFragment" android:id="@id/manage3PAccess">
+        <action android:id="@id/navigateTo3PAuthorizationFragment" app:destination="@id/thirdPartyAuthorizationFragment" app:enterAnim="@anim/enter_from_right" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.account.managedata.thirdparty.revoke.ThirdPartyAuthorizationFragment" android:id="@id/thirdPartyAuthorizationFragment">
+        <argument android:name="thirdPartyAuthorization" app:argType="com.immediasemi.blink.settings.account.managedata.ThirdPartyAuthorization" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.account.managedata.request.SubmitDsarRequestFragment" android:id="@id/submitDsarRequestFragment" />
+    <fragment android:name="com.immediasemi.blink.settings.account.managedata.request.SubmitEudaRequestFragment" android:id="@id/submitEudaRequestFragment" />
+</navigation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="?colorContentBackup" android:id="@id/tvPagination" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/safe_button_module_top" android:maxLines="1" android:layout_marginEnd="@dimen/safe_button_module_right" app:layout_constraintEnd_toEndOf="@id/buttonsContainer" app:layout_constraintTop_toTopOf="parent" style="?safeBodySmallMediumStyle" />
+    <LinearLayout android:orientation="vertical" android:id="@id/buttonsContainer" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tvPagination" app:layout_constraintWidth_max="@dimen/safe_btn_max_width" />
+</merge>

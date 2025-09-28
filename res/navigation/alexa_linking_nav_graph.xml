@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/alexa_linking_nav_graph" app:startDestination="@id/alexaLinkingFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.immediasemi.blink.settings.account.alexa.AlexaLinkingFragment" android:id="@id/alexaLinkingFragment">
+        <action android:id="@id/navigateToAlexaLinkingConsentFragment" app:destination="@id/alexaLinkingConsentFragment" app:enterAnim="@anim/enter_from_right" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <argument android:name="linkStatus" android:defaultValue="@null" app:argType="com.immediasemi.blink.settings.account.alexa.AlexaLinkStatus" app:nullable="true" />
+        <argument android:name="deeplink" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.account.alexa.consent.AlexaLinkingConsentFragment" android:id="@id/alexaLinkingConsentFragment">
+        <argument android:name="alexaAppUrl" android:defaultValue="@null" app:nullable="true" />
+        <argument android:name="lwaFallbackUrl" android:defaultValue="@null" app:nullable="true" />
+        <argument android:name="alexaOrigin" android:defaultValue="@null" app:argType="com.immediasemi.blink.settings.account.alexa.AlexaLinkingOrigin$Alexa" app:nullable="true" />
+        <action android:id="@id/navigateOut" app:popUpTo="@id/alexaLinkingFragment" />
+    </fragment>
+</navigation>

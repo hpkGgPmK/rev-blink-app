@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.helper.widget.Flow android:id="@id/ratingFlow" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" app:constraint_referenced_ids="ratingBar,reviewsTextView" app:flow_horizontalBias="0.0" app:flow_horizontalGap="@dimen/safe_star_rating_gap" app:flow_horizontalStyle="packed" app:flow_verticalBias="0.0" app:flow_verticalGap="@dimen/safe_star_rating_gap" app:flow_wrapMode="chain" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ring.android.safe.rating.RatingBar android:id="@id/ratingBar" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@id/reviewsTextView" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?safeBodyFootnoteLightStyle" />
+</merge>

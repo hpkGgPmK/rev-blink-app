@@ -1,0 +1,36 @@
+.class public final Lcom/blink/android/safe/theme/R;
+.super Ljava/lang/Object;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/blink/android/safe/theme/R$anim;,
+        Lcom/blink/android/safe/theme/R$animator;,
+        Lcom/blink/android/safe/theme/R$attr;,
+        Lcom/blink/android/safe/theme/R$bool;,
+        Lcom/blink/android/safe/theme/R$color;,
+        Lcom/blink/android/safe/theme/R$dimen;,
+        Lcom/blink/android/safe/theme/R$drawable;,
+        Lcom/blink/android/safe/theme/R$id;,
+        Lcom/blink/android/safe/theme/R$integer;,
+        Lcom/blink/android/safe/theme/R$interpolator;,
+        Lcom/blink/android/safe/theme/R$layout;,
+        Lcom/blink/android/safe/theme/R$menu;,
+        Lcom/blink/android/safe/theme/R$plurals;,
+        Lcom/blink/android/safe/theme/R$string;,
+        Lcom/blink/android/safe/theme/R$style;,
+        Lcom/blink/android/safe/theme/R$styleable;,
+        Lcom/blink/android/safe/theme/R$xml;
+    }
+.end annotation
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

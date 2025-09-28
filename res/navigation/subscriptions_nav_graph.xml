@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/subscriptions_nav_graph" app:startDestination="@id/plans_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.immediasemi.blink.settings.subscription.PlansFragment" android:id="@id/plans_fragment">
+        <action android:id="@id/navigateToPlusPlanTrialFragment" app:destination="@id/plus_plan_trial_fragment" />
+        <action android:id="@id/navigateToRestartTrialFragment" app:destination="@id/plus_plan_trial_fragment" />
+        <action android:id="@id/navigateToPlusPlanFragment" app:destination="@id/plus_plan_fragment" />
+        <action android:id="@id/navigateToBasicPlanFragment" app:destination="@id/basic_plan_fragment">
+            <argument android:name="subscriptionId" app:argType="long" />
+        </action>
+        <action android:id="@id/navigateToSelectDeviceFragment" app:destination="@id/select_device_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right">
+            <argument android:name="subscriptionId" app:argType="long" />
+        </action>
+        <action android:id="@id/navigateToNoEligibleDevicesFragment" app:destination="@id/no_eligible_devices_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.subscription.plus.trial.PlusPlanTrialFragment" android:id="@id/plus_plan_trial_fragment">
+        <action android:id="@id/navigateToAlterTrialFragment" app:destination="@id/alter_trial_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right">
+            <argument android:name="alterTrialAction" app:argType="com.immediasemi.blink.apphome.ui.account.altertrial.AlterTrialAction" app:nullable="false" />
+        </action>
+        <action android:id="@id/navigateToPlusPlanBenefitsUpsellFragment" app:destination="@id/plus_plan_benefits_upsell_fragment" />
+        <action android:id="@id/navigateToPlusPlanBenefitsInfoFragment" app:destination="@id/plus_plan_benefits_info_fragment" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.subscription.plus.trial.RestartTrialFragment" android:id="@id/restart_trial_fragment">
+        <action android:id="@id/navigateToAlterTrialFragment" app:destination="@id/alter_trial_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right">
+            <argument android:name="alterTrialAction" app:argType="com.immediasemi.blink.apphome.ui.account.altertrial.AlterTrialAction" app:nullable="false" />
+        </action>
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.subscription.plus.PlusPlanFragment" android:id="@id/plus_plan_fragment">
+        <action android:id="@id/navigateToPlusPlanBenefitsInfoFragment" app:destination="@id/plus_plan_benefits_info_fragment" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.subscription.basic.BasicPlanFragment" android:id="@id/basic_plan_fragment">
+        <argument android:name="subscriptionId" android:defaultValue="0L" app:argType="long" />
+        <action android:id="@id/navigateToSelectDeviceFragment" app:destination="@id/select_device_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right">
+            <argument android:name="subscriptionId" app:argType="long" />
+            <argument android:name="currentDeviceLocalCameraId" app:argType="long" />
+        </action>
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.subscription.plus.PlusPlanBenefitsUpsellFragment" android:id="@id/plus_plan_benefits_upsell_fragment" />
+    <fragment android:name="com.immediasemi.blink.settings.subscription.plus.PlusPlanBenefitsInfoFragment" android:id="@id/plus_plan_benefits_info_fragment" />
+    <fragment android:label="alter_trial" android:name="com.immediasemi.blink.apphome.ui.account.altertrial.AlterTrialFragment" android:id="@id/alter_trial_fragment">
+        <argument android:name="alterTrialAction" app:argType="com.immediasemi.blink.apphome.ui.account.altertrial.AlterTrialAction" app:nullable="false" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.subscription.basic.SelectDeviceFragment" android:id="@id/select_device_fragment">
+        <argument android:name="subscriptionId" android:defaultValue="0L" app:argType="long" />
+        <argument android:name="currentDeviceLocalCameraId" android:defaultValue="0L" app:argType="long" />
+        <action android:id="@id/navigateToMovePlanSuccessFragment" app:destination="@id/attach_plan_success_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.subscription.basic.AttachPlanSuccessFragment" android:id="@id/attach_plan_success_fragment">
+        <argument android:name="newDeviceLocalCameraId" app:argType="long" />
+        <argument android:name="oldDeviceLocalCameraId" android:defaultValue="0L" app:argType="long" />
+        <action android:id="@id/navigateToManagePlansFragment" app:destination="@id/subscriptions_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/subscriptions_nav_graph" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.subscription.basic.NoEligibleDevicesFragment" android:id="@id/no_eligible_devices_fragment" />
+</navigation>

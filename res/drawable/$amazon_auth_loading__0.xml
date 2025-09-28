@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:name="vector" android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:name="group" android:pivotX="12.0" android:pivotY="12.0">
+        <path android:name="path_1" android:fillColor="@color/amazon_auth_colorAccent" android:pathData="M 2.731 8.239 L 4.126 8.896 C 3.747 9.857 3.538 10.904 3.538 12 C 3.538 16.673 7.327 20.462 12 20.462 C 12.999 20.462 13.957 20.289 14.846 19.971 L 15.533 21.358 C 14.434 21.773 13.244 22 12 22 C 6.477 22 2 17.523 2 12 C 2 10.67 2.26 9.4 2.731 8.239 Z M 7.699 2.97 C 9.002 2.348 10.46 2 12 2 C 17.523 2 22 6.477 22 12 C 22 13.461 21.687 14.848 21.124 16.099 L 19.788 15.313 C 20.222 14.296 20.462 13.176 20.462 12 C 20.462 7.327 16.673 3.538 12 3.538 C 10.731 3.538 9.527 3.818 8.447 4.318 L 7.699 2.97 Z" android:strokeWidth="1.0" />
+    </group>
+</vector>

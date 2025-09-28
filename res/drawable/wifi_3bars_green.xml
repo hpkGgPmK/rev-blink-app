@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@color/blink_positive_base" android:pathData="M12.0365 20.498C11.2088 20.498 10.537 19.826 10.537 18.998C10.537 18.184 11.1858 17.521 11.9945 17.499C12.0085 17.499 12.0225 17.498 12.0365 17.498C12.8642 17.498 13.536 18.17 13.536 18.998C13.536 19.827 12.8642 20.498 12.0365 20.498Z" />
+    <path android:fillColor="@color/blink_positive_base" android:pathData="M12.0305 15.189C13.2611 15.189 14.3867 15.639 15.2514 16.385L16.305 15.19C15.1704 14.155 13.6599 13.516 11.9995 13.5C10.3371 13.541 8.83261 14.175 7.68101 15.196L8.74764 16.38C9.62733 15.659 10.7579 15.213 11.9915 15.19C12.0065 15.189 12.0185 15.189 12.0305 15.189Z" />
+    <path android:fillColor="@color/blink_positive_base" android:pathData="M12.0595 11.189C14.3617 11.189 16.4519 12.092 17.9974 13.563L19.113 12.25C17.2597 10.472 14.7675 9.346 12.0135 9.251C9.21847 9.321 6.71935 10.452 4.87499 12.253L5.9966 13.561C7.56605 12.1 9.67331 11.198 11.9915 11.181C12.0155 11.189 12.0375 11.189 12.0595 11.189Z" />
+    <path android:fillColor="@color/blink_content_backup" android:pathData="M2 9.129C4.61708 6.667 8.11486 5.117 11.9735 5C15.8791 5.103 19.3809 6.652 22 9.126L20.7234 10.679C18.4612 8.501 15.3883 7.153 12.0015 7.129C8.63368 7.173 5.59274 8.518 3.34553 10.683L2 9.129Z" />
+</vector>

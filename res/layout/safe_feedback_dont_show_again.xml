@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/divider" android:background="?colorDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/containerDontShowAgain" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="24.0dip">
+        <CheckBox android:id="@id/cbDontShowAgain" android:focusable="false" android:clickable="false" android:layout_width="24.0dip" android:layout_height="wrap_content" android:button="@drawable/safe_resources_checkmark" android:importantForAccessibility="no" android:buttonTint="@color/safe_resources_checkable_color" app:layout_constraintBaseline_toBaselineOf="@id/btnDontShowAgain" app:layout_constraintEnd_toStartOf="@id/btnDontShowAgain" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="parent" />
+        <com.ring.android.safe.feedback.dialog.AccurateWidthTextView android:gravity="center_horizontal" android:id="@id/btnDontShowAgain" android:paddingTop="@dimen/safe_dialog_dont_show_vertical_padding" android:paddingBottom="@dimen/safe_dialog_dont_show_vertical_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/safe_dialog_dont_show_again" android:layout_marginStart="16.0dip" app:layout_constrainedWidth="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/cbDontShowAgain" app:layout_constraintTop_toTopOf="parent" style="?safeBodyNormalMediumStyle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

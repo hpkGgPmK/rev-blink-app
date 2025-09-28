@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/rosie_settings_root_layout" android:tag="layout/fragment_rosie_settings_0" android:background="?colorBackgroundSurface" android:layout_width="fill_parent" android:layout_height="fill_parent" app:container_topDivider="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/toolbar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/pan_tilt_settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.ring.android.safe.cell.IconValueCell android:id="@id/rosie_firmware" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/firmware" />
+    <com.ring.android.safe.cell.IconValueCell android:id="@id/rosie_show_calibrate" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_iconTint="@color/blink_negative_base" app:cell_text="@string/calibrate_pan_tilt_mount" />
+</com.ring.android.safe.container.SafeLinearLayout>

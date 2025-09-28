@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/fragment_sync_module_0" android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/sync_module" />
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/sync_module_description_area" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/firmware_version_cell" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/firmware_version" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/local_storage_cell" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/local_storage_description" app:cell_text="@string/local_storage" />
+            <com.ring.android.safe.header.HeaderView android:id="@id/other_options_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/other_options" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/change_wifi_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/change_wifi_network" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/get_help_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_text="@string/get_help" />
+            <Space android:id="@id/delete_sync_module_space" android:layout_width="fill_parent" android:layout_height="20.0dip" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/delete_sync_module_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/delete" app:cell_iconTint="@color/blink_negative_base" app:cell_text="@string/delete_sync_module" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

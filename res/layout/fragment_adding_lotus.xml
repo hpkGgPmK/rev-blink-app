@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/blink_surface" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/adding_lotus_animation" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/adding_your_lotus" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHeight_percent="0.3" app:layout_constraintTop_toTopOf="parent" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/lotus_progress_indicator" />
+    <TextView android:textSize="@dimen/lotus_onboarding_label" android:textColor="@color/blink_content_base" android:gravity="center" android:id="@id/stage_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lotus_onboarding_margin" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/adding_lotus_animation" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/home_nav_graph" app:startDestination="@id/system_pager_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="@string/home" android:name="com.immediasemi.blink.apphome.ui.systems.SystemPagerFragment" android:id="@id/system_pager_fragment" />
+    <action android:id="@id/action_global_new_accessory_added" app:destination="@id/new_accessory_added" />
+    <dialog android:name="com.immediasemi.blink.apphome.ui.systems.NewAccessoryDialogFragment" android:id="@id/new_accessory_added">
+        <argument android:name="newAccessory" app:argType="com.immediasemi.blink.db.accessories.NewAccessory" />
+    </dialog>
+    <action android:id="@id/action_navigation_account_to_snooze_notifications_fragment" app:destination="@id/snooze_notifications_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <fragment android:label="SnoozeNotificationsFragment" android:name="com.immediasemi.blink.device.camera.snooze.notification.SnoozeNotificationsFragment" android:id="@id/snooze_notifications_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="localCameraId" app:argType="long" />
+        <argument android:name="applyToAll" android:defaultValue="false" app:argType="boolean" />
+    </fragment>
+    <action android:id="@id/action_navigation_account_to_un_snooze_notifications_dialog" app:destination="@id/un_snooze_notifications_dialog" />
+    <dialog android:name="com.immediasemi.blink.device.camera.snooze.notification.UnSnoozeNotificationsDialogFragment" android:id="@id/un_snooze_notifications_dialog">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="localCameraId" app:argType="long" />
+    </dialog>
+    <dialog android:name="com.immediasemi.blink.home.LotusMountingHelpDialogFragment" android:id="@id/lotus_mounting_help_fragment">
+        <argument android:name="serialNumber" app:argType="string" />
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="lotusId" app:argType="long" />
+        <argument android:name="revision" app:argType="com.immediasemi.blink.db.CameraRevision" />
+    </dialog>
+    <dialog android:name="com.immediasemi.blink.home.trial.TrialCarouselFragment" android:id="@id/trial_carousel_dialog">
+        <argument android:name="wasUsingCam2SmLocalStorage" app:argType="boolean" app:nullable="false" />
+    </dialog>
+    <fragment android:name="com.immediasemi.blink.home.trial.TrialCarouselPageFragment" android:id="@id/trial_carousel_page">
+        <argument android:name="content" app:argType="com.immediasemi.blink.home.trial.CarouselPageContent" app:nullable="false" />
+    </fragment>
+    <action android:id="@id/action_navigation_account_to_trial_summary_fragment" app:destination="@id/trial_summary_dialog" />
+    <dialog android:name="com.immediasemi.blink.home.trial.TrialSummaryFragment" android:id="@id/trial_summary_dialog">
+        <argument android:name="variation" app:argType="com.immediasemi.blink.home.trial.ScreenVariation" app:nullable="false" />
+    </dialog>
+    <action android:id="@id/action_navigation_account_to_additional_trial_fragment" app:destination="@id/additional_trial_fragment" />
+    <dialog android:label="additional_trial" android:name="com.immediasemi.blink.home.additionaltrial.AdditionalTrialFragment" android:id="@id/additional_trial_fragment" />
+    <action android:id="@id/navigateToTileStatusActionSheet" app:destination="@id/camera_tile_status_action_sheet" />
+    <dialog android:name="com.immediasemi.blink.home.system.CameraTileStatusActionSheet" android:id="@id/camera_tile_status_action_sheet">
+        <argument android:name="payload" app:argType="com.immediasemi.blink.home.system.CameraTileStatusPayload" />
+        <argument android:name="RICH_ACTION_SHEET_CONFIG" app:argType="com.ring.android.safe.actionsheet.rich.RichActionSheetConfig" />
+    </dialog>
+    <action android:id="@id/navigateToTileMoreActionSheet" app:destination="@id/camera_tile_more_action_sheet" />
+    <dialog android:name="com.immediasemi.blink.home.system.CameraTileMoreActionSheet" android:id="@id/camera_tile_more_action_sheet">
+        <argument android:name="cameraId" app:argType="long" />
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="RICH_ACTION_SHEET_CONFIG" app:argType="com.ring.android.safe.actionsheet.rich.RichActionSheetConfig" />
+    </dialog>
+    <action android:id="@id/navigateToDeviceListOptionsActionSheet" app:destination="@id/device_list_options_action_sheet" />
+    <dialog android:name="com.immediasemi.blink.home.system.DeviceListOptionsActionSheet" android:id="@id/device_list_options_action_sheet">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="RICH_ACTION_SHEET_CONFIG" app:argType="com.ring.android.safe.actionsheet.rich.RichActionSheetConfig" />
+    </dialog>
+    <action android:id="@id/navigateToAllDevices" app:destination="@id/all_devices_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <fragment android:label="@string/all_devices" android:name="com.immediasemi.blink.activities.systempicker.AllDevicesFragment" android:id="@id/all_devices_fragment">
+        <argument android:name="networkId" app:argType="long" />
+    </fragment>
+    <action android:id="@id/navigateToPlusPlanBenefitsUpsellFragment" app:destination="@id/plus_plan_benefits_upsell_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right">
+        <argument android:name="messagePriority" app:argType="long" />
+    </action>
+    <action android:id="@id/navigateToLowBatteriesFragment" app:destination="@id/low_batteries_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <fragment android:name="com.immediasemi.blink.settings.subscription.plus.PlusPlanBenefitsUpsellFragment" android:id="@id/plus_plan_benefits_upsell_fragment">
+        <argument android:name="messagePriority" android:defaultValue="0L" app:argType="long" />
+    </fragment>
+    <fragment android:label="@string/camera_battery_low" android:name="com.immediasemi.blink.home.system.LowBatteriesFragment" android:id="@id/low_batteries_fragment">
+        <argument android:name="deviceName" app:argType="string" />
+        <argument android:name="genericDeviceNameRes" app:argType="integer" />
+        <argument android:name="genericDeviceNamePluralRes" app:argType="integer" />
+    </fragment>
+</navigation>

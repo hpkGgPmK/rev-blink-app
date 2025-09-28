@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:id="@id/value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="10.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toLeftOf="@id/decrement" app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton android:id="@id/decrement" android:background="@color/blink_surface" android:layout_width="wrap_content" android:layout_height="0.0dip" android:src="@drawable/minus_button_simple" android:layout_marginEnd="6.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toLeftOf="@id/increment" app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton android:id="@id/increment" android:background="@color/blink_surface" android:layout_width="wrap_content" android:layout_height="0.0dip" android:src="@drawable/ic_plus_icon_simple" app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

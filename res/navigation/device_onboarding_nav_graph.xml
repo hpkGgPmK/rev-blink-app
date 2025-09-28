@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/device_onboarding_nav_graph" app:startDestination="@id/add_device_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <argument android:name="source" app:argType="com.immediasemi.blink.common.log.event.OnboardingSource" />
+    <action android:id="@id/exit" app:popUpTo="@id/device_onboarding_nav_graph" />
+    <fragment android:name="com.immediasemi.blink.device.onboard.choose.ChooseDeviceFragment" android:id="@id/add_device_fragment" />
+    <action android:id="@id/navigateToSerialNumberModule" app:destination="@id/serial_number_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <include app:graph="@navigation/serial_number_nav_graph" />
+    <action android:id="@id/navigateToSelectNameModule" app:destination="@id/select_name_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <include app:graph="@navigation/select_name_nav_graph" />
+    <action android:id="@id/navigateToSelectSystemModule" app:destination="@id/select_system_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <include app:graph="@navigation/select_system_nav_graph" />
+    <action android:id="@id/navigateToAddSyncModuleModule" app:destination="@id/sync_module_required_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <fragment android:name="com.immediasemi.blink.device.onboard.SyncModuleRequiredFragment" android:id="@id/sync_module_required_fragment" />
+    <action android:id="@id/navigateToConnectToWifi" app:destination="@id/connect_to_wifi_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right">
+        <argument android:name="deviceId" android:defaultValue="@null" app:argType="java.lang.Long" app:nullable="true" />
+        <argument android:name="deviceIdentity" app:argType="com.immediasemi.blink.common.device.IdentifyDeviceResponse" />
+        <argument android:name="serialNumber" app:argType="string" />
+        <argument android:name="systemId" app:argType="long" />
+        <argument android:name="source" app:argType="com.immediasemi.blink.common.log.event.OnboardingSource" />
+    </action>
+    <include app:graph="@navigation/connect_to_wifi_nav_graph" />
+    <action android:id="@id/navigateToConnectToWifiModule" app:destination="@id/connectToWifiOnboardingFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <fragment android:name="com.immediasemi.blink.device.onboard.wifi.ConnectToWifiOnboardingFragment" android:id="@id/connectToWifiOnboardingFragment" />
+    <action android:id="@id/navigateToBatteriesModule" app:destination="@id/batteries_onboarding_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <include app:graph="@navigation/batteries_onboarding_nav_graph" />
+    <action android:id="@id/navigateToAddDoorbellLfrModule" app:destination="@id/add_doorbell_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <include app:graph="@navigation/add_doorbell_nav_graph" />
+    <action android:id="@id/navigateToMountModule" app:destination="@id/mount_doorbell_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <include app:graph="@navigation/mount_doorbell_nav_graph" />
+    <action android:id="@id/navigateToMountCraneModule" app:destination="@id/mount_crane_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <include app:graph="@navigation/mount_crane_nav_graph" />
+    <action android:id="@id/navigateToChimeModule" app:destination="@id/chime_setup_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <include app:graph="@navigation/chime_setup_nav_graph" />
+    <action android:id="@id/navigateToInstallationCompleteModule" app:destination="@id/installation_complete_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.InstallationCompleteFragment" android:id="@id/installation_complete_fragment" />
+    <action android:id="@id/navigateToPlugInDeviceModule" app:destination="@id/plug_in_device_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <fragment android:name="com.immediasemi.blink.device.onboard.plugin.PlugInDeviceFragment" android:id="@id/plug_in_device_fragment" />
+</navigation>

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "devices": [
+    {
+      "brand": "Nokia",
+      "device": "BGT_sprout",
+      "aecCapable": false
+    }
+  ]
+}

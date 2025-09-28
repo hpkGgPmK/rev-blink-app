@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/settings_nav_graph" app:startDestination="@id/settings_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="@string/system_settings" android:name="com.immediasemi.blink.settings.SettingsFragment" android:id="@id/settings_fragment">
+        <action android:id="@id/navigateToAccountAndPrivacyFragment" app:destination="@id/account_and_privacy_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/navigateToSubscriptionsNavGraph" app:destination="@id/subscriptions_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/navigateToDeviceAndSystemSettingsFragment" app:destination="@id/device_and_system_settings_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/navigateToManageAccessFragment" app:destination="@id/manage_access_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToNotificationsFragment" app:destination="@id/notifications_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/navigateToWhatsNewFragment" app:destination="@id/whats_new_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+        <action android:id="@id/navigateToHelpFragment" app:destination="@id/help_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+    <include app:graph="@navigation/account_and_privacy_nav_graph" />
+    <include app:graph="@navigation/subscriptions_nav_graph" />
+    <fragment android:label="@string/device_and_system_settings" android:name="com.immediasemi.blink.settings.DeviceAndSystemSettingsFragment" android:id="@id/device_and_system_settings_fragment">
+        <action android:id="@id/navigateToSystemSettings" app:destination="@id/systemSettingsFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/shared_access" android:name="com.immediasemi.blink.settings.access.ManageAccessFragment" android:id="@id/manage_access_fragment">
+        <action android:id="@id/navigateToEditSharedAccessNameFragment" app:destination="@id/edit_shared_access_name_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/shared_access" android:name="com.immediasemi.blink.settings.access.EditAccessNameFragment" android:id="@id/edit_shared_access_name_fragment">
+        <argument android:name="authorizationId" app:argType="string" />
+        <argument android:name="initialName" app:argType="string" />
+    </fragment>
+    <fragment android:label="@string/notifications" android:name="com.immediasemi.blink.settings.NotificationsFragment" android:id="@id/notifications_fragment" />
+    <fragment android:label="@string/whats_new" android:name="com.immediasemi.blink.settings.WhatsNewFragment" android:id="@id/whats_new_fragment" />
+    <fragment android:label="@string/help" android:name="com.immediasemi.blink.settings.HelpFragment" android:id="@id/help_fragment">
+        <action android:id="@id/navigateToCustomerServiceFragment" app:destination="@id/customer_service_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToLegalFragment" app:destination="@id/legal_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/customer_service" android:name="com.immediasemi.blink.settings.CustomerServiceFragment" android:id="@id/customer_service_fragment" />
+    <fragment android:label="@string/legal_and_compliance" android:name="com.immediasemi.blink.settings.LegalFragment" android:id="@id/legal_fragment" />
+    <fragment android:label="SystemSettingsFragment" android:name="com.immediasemi.blink.common.system.setting.SystemSettingsFragment" android:id="@id/systemSettingsFragment">
+        <argument android:name="networkId" app:argType="long" />
+        <action android:id="@id/navigateToAllDevices" app:destination="@id/all_devices_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToNoDevicesFragment" app:destination="@id/no_devices_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/all_devices" android:name="com.immediasemi.blink.activities.systempicker.AllDevicesFragment" android:id="@id/all_devices_fragment">
+        <argument android:name="networkId" app:argType="long" />
+    </fragment>
+    <fragment android:label="@string/manage_devices" android:name="com.immediasemi.blink.common.system.setting.NoDevicesFragment" android:id="@id/no_devices_fragment" />
+</navigation>

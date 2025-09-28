@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/account_management_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/account_management" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.ring.android.safe.container.SafeScrollView android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_icon="@drawable/account_mgmt" app:area_iconTint="@color/blink_primary_base" app:area_subText="@string/settings_account_management_description" app:area_text="@string/account_management" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/change_email_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/mail" app:cell_iconTint="@color/blink_primary_base" app:cell_text="@string/email" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/change_password_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/lock" app:cell_iconTint="@color/blink_primary_base" app:cell_text="@string/password" />
+            <com.ring.android.safe.cell.ToggleCell android:id="@id/biometric_unlock" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/person_detection" app:cell_iconTint="@color/blink_primary_base" app:cell_subText="@string/biometric_unlock_description_v2" app:cell_text="@string/biometric_unlock" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/change_phone_number" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/phone_on" app:cell_iconTint="@color/blink_primary_base" app:cell_text="@string/phone_number" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/country" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/country" app:cell_iconTint="@color/blink_primary_base" app:cell_text="@string/country" />
+            <Space android:layout_width="fill_parent" android:layout_height="@dimen/spacing_1x" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/delete_account" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/delete" app:cell_iconTint="?colorNegativeBase" app:cell_text="@string/delete_account" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+</com.ring.android.safe.container.SafeLinearLayout>

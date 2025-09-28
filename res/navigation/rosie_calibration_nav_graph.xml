@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/rosie_calibration_nav_graph" app:startDestination="@id/rosie_calibrate_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="fragment_rosie_calibrate" android:name="com.immediasemi.blink.device.accessory.pantilt.setting.RosieCalibrateFragment" android:id="@id/rosie_calibrate_fragment">
+        <argument android:name="network_id" app:argType="long" />
+        <argument android:name="camera_id" app:argType="long" />
+        <argument android:name="calibrated" app:argType="boolean" />
+        <action android:id="@id/navigateToRosieCalibrateSpinnerFragment" app:destination="@id/rosie_calibrate_spinner_fragment" app:enterAnim="@anim/enter_up" app:popExitAnim="@anim/exit_down" app:popUpTo="@id/rosie_calibrate_fragment" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:label="fragment_rosie_calibrate_spinner" android:name="com.immediasemi.blink.device.accessory.pantilt.setting.RosieCalibrateSpinnerFragment" android:id="@id/rosie_calibrate_spinner_fragment">
+        <argument android:name="network_id" app:argType="long" />
+        <argument android:name="camera_id" app:argType="long" />
+        <argument android:name="calibrated" app:argType="boolean" />
+    </fragment>
+</navigation>

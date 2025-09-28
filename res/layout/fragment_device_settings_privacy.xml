@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/device_settings_privacy_root" android:tag="layout/fragment_device_settings_privacy_0" android:background="?colorBackgroundSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/privacy_settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ring.android.safe.cell.IconValueCell android:id="@id/privacy_zones_cell" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/device_privacy_settings_privacy_zones_description" app:cell_text="@string/privacy_zones" />
+                <com.ring.android.safe.cell.ToggleCell android:id="@id/video_recording_cell" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/device_privacy_settings_video_recording_description" app:cell_text="@string/video_recording" />
+                <com.ring.android.safe.cell.ToggleCell android:id="@id/audio_streaming_cell" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/device_privacy_settings_audio_streaming_description" app:cell_text="@string/audio_streaming" />
+            </com.ring.android.safe.container.SafeLinearLayout>
+        </com.ring.android.safe.container.SafeScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</com.ring.android.safe.container.SafeLinearLayout>

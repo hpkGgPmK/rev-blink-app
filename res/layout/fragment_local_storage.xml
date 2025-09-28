@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:id="@id/fragment_local_storage" android:tag="layout/fragment_local_storage_0" android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationContentDescription="@string/back" app:navigationIcon="?homeAsUpIndicator" app:title="@string/local_storage" />
+    <FrameLayout android:id="@id/twizzler_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/local_storage_description_area" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_buttonText="@string/local_storage_area_button_text" app:area_icon="@drawable/media_connected" app:area_iconTint="@color/blink_positive_base" app:area_subText="@string/local_storage_area_description" />
+            <com.ring.android.safe.cell.GraphCell android:id="@id/available_storage_cell" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/available_storage_description" app:cell_text="@string/storage_used" />
+            <com.ring.android.safe.header.HeaderView android:id="@id/other_options_header" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/storage_options" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/cam2sm_local_storage_cell" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/cam2sm_local_storage_description" app:cell_text="@string/cam2sm_local_storage_title" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/clip_backup_cell" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_subText="@string/clip_backup_description" app:cell_text="@string/clip_backup_title" />
+            <Space android:id="@id/safely_eject_space" android:layout_width="fill_parent" android:layout_height="20.0dip" />
+            <com.ring.android.safe.cell.IconValueCell android:id="@id/safely_eject_cell" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_icon="@drawable/eject" app:cell_iconTint="@color/blink_primary_base" app:cell_text="@string/safely_eject" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+</com.ring.android.safe.container.SafeLinearLayout>

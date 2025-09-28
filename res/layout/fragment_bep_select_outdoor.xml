@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/description_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_text="@string/bep_select_outdoor_4_text" />
+            <com.ring.android.safe.container.RadioGroup android:id="@id/radio_group" android:layout_width="fill_parent" android:layout_height="wrap_content" app:container_bottomDivider="true" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.VerticalButtonModule android:layout_gravity="bottom" android:id="@id/vertical_button_module" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_bottomText="@string/bep_cant_find_outdoor_4_button" app:buttonModule_topText="@string/continue_" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

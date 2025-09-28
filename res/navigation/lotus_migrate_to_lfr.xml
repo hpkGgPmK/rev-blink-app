@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/lotus_migrate_to_lfr" app:startDestination="@id/event_response_info"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="event_response_info" android:name="com.immediasemi.blink.adddevice.lotus.migrate2lfr.EventResponseInfoFragment" android:id="@id/event_response_info">
+        <action android:id="@id/action_wake_up_lotus" app:destination="@id/wake_up_event_response" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_event_response_to_start_migration" app:destination="@id/migrate_to_lfr" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="wake_up_event_response" android:name="com.immediasemi.blink.adddevice.lotus.migrate2lfr.WakeUpEventResponseFragment" android:id="@id/wake_up_event_response">
+        <action android:id="@id/action_start_migration" app:destination="@id/migrate_to_lfr" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="migrate_to_lfr" android:name="com.immediasemi.blink.adddevice.lotus.migrate2lfr.MigrateToLFRFragment" android:id="@id/migrate_to_lfr">
+        <argument android:name="lotusReset" android:defaultValue="false" app:argType="boolean" />
+        <action android:id="@id/action_migration_complete" app:destination="@id/migration_complete" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/event_response_info" app:popUpToInclusive="true" />
+        <action android:id="@id/action_migrate_to_lfr_to_not_finding_lotus" app:destination="@id/not_finding_lotus" />
+        <action android:id="@id/action_migrate_to_lfr_to_power_analysis" app:destination="@id/power_analysis" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="migration_complete" android:name="com.immediasemi.blink.adddevice.lotus.migrate2lfr.MigrationCompleteFragment" android:id="@id/migration_complete" />
+    <fragment android:label="NotFindingLotusFragment" android:name="com.immediasemi.blink.adddevice.lotus.migrate2lfr.reset.NotFindingLotusFragment" android:id="@id/not_finding_lotus">
+        <action android:id="@id/action_not_finding_lotus_to_turn_off_power" app:destination="@id/turn_off_power" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/action_not_finding_lotus_to_migrate_to_lfr" app:destination="@id/migrate_to_lfr" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="TurnOffPowerFragment" android:name="com.immediasemi.blink.adddevice.lotus.migrate2lfr.reset.TurnOffPowerFragment" android:id="@id/turn_off_power">
+        <action android:id="@id/action_turn_off_power_to_remove_back_cover" app:destination="@id/remove_back_cover" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="RemoveBackCoverFragment" android:name="com.immediasemi.blink.adddevice.lotus.migrate2lfr.reset.RemoveBackCoverMigrateToLFRFragment" android:id="@id/remove_back_cover">
+        <action android:id="@id/action_remove_back_cover_to_reset_lotus" app:destination="@id/reset_lotus" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="ResetLotusFragment" android:name="com.immediasemi.blink.adddevice.lotus.migrate2lfr.reset.ResetLotusFragment" android:id="@id/reset_lotus">
+        <action android:id="@id/action_reset_lotus_to_place_doorbell_on_back_cover" app:destination="@id/place_doorbell_on_back_cover" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="PlaceDoorbellOnBackCoverFragment" android:name="com.immediasemi.blink.adddevice.lotus.migrate2lfr.reset.PlaceDoorbellOnBackCoverFragment" android:id="@id/place_doorbell_on_back_cover">
+        <action android:id="@id/action_place_doorbell_on_back_cover_to_turn_on_power" app:destination="@id/turn_on_power" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="TurnOnPowerFragment" android:name="com.immediasemi.blink.adddevice.lotus.migrate2lfr.reset.TurnOnPowerFragment" android:id="@id/turn_on_power">
+        <action android:id="@id/action_turn_on_power_to_migrate_to_lfr" app:destination="@id/migrate_to_lfr" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="PowerAnalysisFragment" android:name="com.immediasemi.blink.adddevice.lotus.migrate2lfr.MigrationPowerAnalysisFragment" android:id="@id/power_analysis">
+        <action android:id="@id/action_migrate_powerAnalysis_to_powerAnalysisResult" app:destination="@id/power_analysis_result" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="PowerAnalysisResultFragment" android:name="com.immediasemi.blink.adddevice.lotus.migrate2lfr.MigrationPowerAnalysisResultFragment" android:id="@id/power_analysis_result">
+        <action android:id="@id/action_migrate_powerAnalysisResult_to_Complete" app:destination="@id/migration_complete" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/event_response_info" app:popUpToInclusive="true" />
+        <argument android:name="result" app:argType="com.immediasemi.blink.adddevice.lotus.chime.PowerAnalysisResult" />
+    </fragment>
+</navigation>

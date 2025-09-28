@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/camera_settings_nav_graph" app:startDestination="@id/device_settings_main_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="@string/device_settings" android:name="com.immediasemi.blink.device.setting.DeviceSettingsMainFragment" android:id="@id/device_settings_main_fragment">
+        <argument android:name="cameraId" app:argType="long" />
+        <argument android:name="networkId" app:argType="long" />
+        <action android:id="@id/navigateToDeviceSettingsGeneralFragment" app:destination="@id/device_settings_general_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToDeviceSettingsMotionFragment" app:destination="@id/device_settings_motion_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToDeviceSettingsVideoPhotoFragment" app:destination="@id/device_settings_video_photo_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToDeviceSettingsAudioFragment" app:destination="@id/device_settings_audio_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToDeviceSettingsFloodlightFragment" app:destination="@id/device_settings_floodlight_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToDeviceSettingsFloodlightMountFragment" app:destination="@id/device_settings_floodlight_mount_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToFloodlightMountOfflineFragment" app:destination="@id/floodlight_mount_offline_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToRosieSettingsFragment" app:destination="@id/rosie_settings_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToRosieDeleteFragment" app:destination="@id/rosie_delete_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToDeviceSettingsDoorbellChimeFragment" app:destination="@id/device_settings_doorbell_chime_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToDeviceSettingsMountingChimeFragment" app:destination="@id/device_settings_mounting_chime_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToDeviceSettingsPrivacyFragment" app:destination="@id/device_settings_privacy_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToDeviceSettingsHelpFragment" app:destination="@id/device_settings_help_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="fragment_device_settings_general" android:name="com.immediasemi.blink.device.setting.DeviceSettingsGeneralFragment" android:id="@id/device_settings_general_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+        <action android:id="@id/navigateToBepStatusFragment" app:destination="@id/bep_status_fragment" />
+        <action android:id="@id/navigateToBepUpsellFragment" app:destination="@id/bep_upsell_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToSelectCoverageFragment" app:destination="@id/select_coverage_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToDeviceSettingsTemperatureFragment" app:destination="@id/temperature_settings_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="device_settings_motion_fragment" android:name="com.immediasemi.blink.device.setting.motion.DeviceSettingsMotionFragment" android:id="@id/device_settings_motion_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+        <action android:id="@id/navigateToMotionRecordingTypesFragment" app:destination="@id/motion_recording_types_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToSmartDetectionFragment" app:destination="@id/smartDetectionFragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="MotionRecordingTypesFragment" android:name="com.immediasemi.blink.device.camera.setting.motion.MotionRecordingTypesFragment" android:id="@id/motion_recording_types_fragment">
+        <argument android:name="cameraId" app:argType="long" />
+        <argument android:name="networkId" app:argType="long" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.setting.motion.smart.SmartDetectionFragment" android:id="@id/smartDetectionFragment">
+        <argument android:name="cameraId" app:argType="long" />
+    </fragment>
+    <fragment android:label="device_settings_video_photo_fragment" android:name="com.immediasemi.blink.device.setting.DeviceSettingsVideoPhotoFragment" android:id="@id/device_settings_video_photo_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+        <action android:id="@id/navigateToDeviceSettingsVideoQualityFragment" app:destination="@id/device_settings_video_quality_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="device_settings_floodlight_mount_fragment" android:name="com.immediasemi.blink.device.setting.DeviceSettingsVideoQualityFragment" android:id="@id/device_settings_video_quality_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+    </fragment>
+    <fragment android:label="device_settings_audio_fragment" android:name="com.immediasemi.blink.device.setting.DeviceSettingsAudioFragment" android:id="@id/device_settings_audio_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+    </fragment>
+    <fragment android:label="device_settings_floodlight_fragment" android:name="com.immediasemi.blink.device.setting.DeviceSettingsFloodlightFragment" android:id="@id/device_settings_floodlight_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+    </fragment>
+    <fragment android:label="device_settings_floodlight_mount_fragment" android:name="com.immediasemi.blink.device.setting.DeviceSettingsFloodlightMountFragment" android:id="@id/device_settings_floodlight_mount_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+    </fragment>
+    <fragment android:label="floodlight_mount_offline_fragment" android:name="com.immediasemi.blink.device.accessory.floodlight.FloodlightMountOfflineFragment" android:id="@id/floodlight_mount_offline_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+    </fragment>
+    <fragment android:label="fragment_settings_rosie" android:name="com.immediasemi.blink.device.accessory.pantilt.setting.RosieSettingsFragment" android:id="@id/rosie_settings_fragment">
+        <argument android:name="network_id" app:argType="long" />
+        <argument android:name="camera_id" app:argType="long" />
+        <action android:id="@id/navigateToRosieCalibrate" app:destination="@id/rosie_calibration_nav_graph" app:enterAnim="@anim/enter_up" app:popExitAnim="@anim/exit_down">
+            <argument android:name="network_id" app:argType="long" />
+            <argument android:name="camera_id" app:argType="long" />
+            <argument android:name="calibrated" app:argType="boolean" />
+        </action>
+    </fragment>
+    <include app:graph="@navigation/rosie_calibration_nav_graph" />
+    <fragment android:label="fragment_delete_rosie" android:name="com.immediasemi.blink.device.accessory.pantilt.setting.RosieDeleteFragment" android:id="@id/rosie_delete_fragment">
+        <argument android:name="network_id" app:argType="long" />
+        <argument android:name="camera_id" app:argType="long" />
+    </fragment>
+    <fragment android:label="device_settings_doorbell_chime_fragment" android:name="com.immediasemi.blink.device.setting.DeviceSettingsDoorbellChimeFragment" android:id="@id/device_settings_doorbell_chime_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+        <action android:id="@id/navigateToMiniAsChimeSettingsFragment" app:destination="@id/mini_as_chime_settings_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="device_settings_mounting_chime_fragment" android:name="com.immediasemi.blink.device.setting.DeviceSettingsMountingChimeFragment" android:id="@id/device_settings_mounting_chime_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+        <action android:id="@id/navigateToMiniAsChimeSettingsFragment" app:destination="@id/mini_as_chime_settings_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="fragment_mini_as_chime_settings" android:name="com.immediasemi.blink.device.camera.mini.chime.MiniAsChimeSettingsFragment" android:id="@id/mini_as_chime_settings_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="lotusId" app:argType="long" />
+    </fragment>
+    <fragment android:label="device_settings_privacy_fragment" android:name="com.immediasemi.blink.device.setting.DeviceSettingsPrivacyFragment" android:id="@id/device_settings_privacy_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+    </fragment>
+    <fragment android:label="device_settings_help_fragment" android:name="com.immediasemi.blink.device.setting.DeviceSettingsHelpFragment" android:id="@id/device_settings_help_fragment">
+        <argument android:name="cameraId" app:argType="long" />
+        <action android:id="@id/navigateToCustomerServiceFragment" app:destination="@id/customer_service_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:label="@string/customer_service" android:name="com.immediasemi.blink.settings.CustomerServiceFragment" android:id="@id/customer_service_fragment" />
+    <fragment android:label="fragment_bep_status" android:name="com.immediasemi.blink.device.accessory.batteryextensionpack.BatteryExtensionPackStatusFragment" android:id="@id/bep_status_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="bepSerial" app:argType="string" />
+    </fragment>
+    <fragment android:label="@string/battery_extension_pack" android:name="com.immediasemi.blink.device.accessory.batteryextensionpack.BatteryExtensionPackUpsellFragment" android:id="@id/bep_upsell_fragment" />
+    <fragment android:label="@string/select_a_network" android:name="com.immediasemi.blink.adddevice.SelectCoverageFragment" android:id="@id/select_coverage_fragment">
+        <argument android:name="networkId" app:argType="long" />
+        <argument android:name="cameraId" app:argType="long" />
+    </fragment>
+    <fragment android:label="@string/temperature" android:name="com.immediasemi.blink.device.setting.DeviceSettingsTemperatureFragment" android:id="@id/temperature_settings_fragment">
+        <argument android:name="cameraId" app:argType="long" />
+    </fragment>
+</navigation>

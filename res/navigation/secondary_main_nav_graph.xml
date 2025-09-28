@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/secondary_main_nav_graph" app:startDestination="@id/bottom_navigation_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.immediasemi.blink.views.BottomNavigationFragment" android:id="@id/bottom_navigation_fragment" />
+    <action android:id="@id/navigateToDeviceSettings" app:destination="@id/camera_settings_nav_graph">
+        <argument android:name="cameraId" app:argType="long" />
+        <argument android:name="networkId" app:argType="long" />
+    </action>
+    <include app:graph="@navigation/camera_settings_nav_graph" />
+    <action android:id="@id/navigateToSyncModuleFlow" app:destination="@id/sync_module_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right">
+        <argument android:name="syncModuleId" app:argType="long" />
+    </action>
+    <include app:graph="@navigation/sync_module_nav_graph" />
+    <action android:id="@id/navigateToDeviceOnboarding" app:destination="@id/device_onboarding_nav_graph">
+        <argument android:name="from_onboarding" app:argType="boolean" app:nullable="false" />
+        <argument android:name="source" app:argType="com.immediasemi.blink.common.log.event.OnboardingSource" app:nullable="false" />
+        <argument android:name="network_id" app:argType="java.lang.Long" app:nullable="true" />
+        <argument android:name="doorbell_id" app:argType="java.lang.Long" app:nullable="true" />
+    </action>
+    <include app:graph="@navigation/device_onboarding_nav_graph" />
+    <action android:id="@id/navigateToConnectToWifi" app:destination="@id/connect_to_wifi_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right">
+        <argument android:name="deviceId" app:argType="long" />
+        <argument android:name="source" app:argType="com.immediasemi.blink.common.log.event.OnboardingSource" />
+    </action>
+    <include app:graph="@navigation/connect_to_wifi_nav_graph" />
+    <action android:id="@id/action_global_lotus_to_lfr_migration" app:destination="@id/migrate_to_lfr_host_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    <fragment android:label="MigrateToLFRHostFragment" android:name="com.immediasemi.blink.adddevice.lotus.migrate2lfr.MigrateToLFRHostFragment" android:id="@id/migrate_to_lfr_host_fragment">
+        <argument android:name="serverLotusId" app:argType="long" />
+    </fragment>
+    <action android:id="@id/navigateToShareAccessFlow" app:destination="@id/share_access_nav_graph" app:enterAnim="@anim/enter_up" app:popExitAnim="@anim/exit_down" />
+    <include app:graph="@navigation/share_access_nav_graph" />
+    <action android:id="@id/navigateToAccessReceivedInfoFragment" app:destination="@id/access_received_info_fragment" app:enterAnim="@anim/enter_up" app:popExitAnim="@anim/exit_down" />
+    <fragment android:label="@string/shared_access" android:name="com.immediasemi.blink.settings.access.AccessReceivedInfoFragment" android:id="@id/access_received_info_fragment" />
+    <action android:id="@id/navigateToAccessGivenInfoFragment" app:destination="@id/access_given_info_fragment" app:enterAnim="@anim/enter_up" app:popExitAnim="@anim/exit_down" />
+    <fragment android:label="@string/shared_access" android:name="com.immediasemi.blink.settings.access.AccessGivenInfoFragment" android:id="@id/access_given_info_fragment" />
+    <action android:id="@id/navigateToAcceptInvitationNavGraph" app:destination="@id/accept_invitation_nav_graph" app:enterAnim="@anim/enter_up" app:popExitAnim="@anim/exit_down">
+        <argument android:name="invitationId" app:argType="string" />
+    </action>
+    <include app:graph="@navigation/accept_invitation_nav_graph" />
+    <action android:id="@id/navigateToManageDataFragment" app:destination="@id/manage_data_nav_graph" app:enterAnim="@anim/enter_up" app:popExitAnim="@anim/exit_down" />
+    <include app:graph="@navigation/manage_data_nav_graph" />
+</navigation>

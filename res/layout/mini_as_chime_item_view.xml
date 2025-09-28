@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/mini_as_chime_view" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="17.0sp" android:textColor="@color/blink_content_base" android:ellipsize="end" android:id="@id/mini_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/name" android:layout_marginEnd="10.0dip" app:layout_constraintEnd_toStartOf="@id/mini_as_chime_frame_layout" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout android:id="@id/mini_as_chime_frame_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <FrameLayout android:layout_gravity="end" android:id="@id/selected_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/selected" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/selected" />
+            <ImageView android:id="@id/not_selected" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_select" />
+        </FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center" android:id="@id/mini_offline" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@id/offline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/offline" android:layout_marginEnd="8.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/offline_power_caret" app:layout_constraintTop_toTopOf="parent" style="@style/TextBoxSecondary" />
+            <TextView android:textSize="@dimen/about_text_size" android:id="@id/offline_power_caret" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:paddingStart="0.0dip" android:paddingEnd="8.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView android:layout_gravity="center" android:id="@id/requires_firmware_update_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/requires_firmware_updates" style="@style/TextBoxSecondary" />
+    </FrameLayout>
+    <TextView android:textSize="15.0sp" android:textColor="@color/blink_primary_base" android:ellipsize="end" android:id="@id/contact_cs" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/contact_support" android:maxLines="2" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/mini_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>

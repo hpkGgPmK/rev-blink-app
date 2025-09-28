@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/mount_doorbell_nav_graph" app:startDestination="@id/what_you_need_to_mount_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <argument android:name="from_onboarding" android:defaultValue="true" app:argType="boolean" app:nullable="false" />
+    <argument android:name="network_id" android:defaultValue="@null" app:argType="java.lang.Long" app:nullable="true" />
+    <argument android:name="doorbell_id" android:defaultValue="@null" app:argType="java.lang.Long" app:nullable="true" />
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.WhatYouNeedToMountFragment" android:id="@id/what_you_need_to_mount_fragment">
+        <action android:id="@id/navigateToWireToChimePrompt" app:destination="@id/wire_to_chime_prompt_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.WireToChimePromptFragment" android:id="@id/wire_to_chime_prompt_fragment">
+        <action android:id="@id/navigateToChimeRiskOfShock" app:destination="@id/chime_risk_of_shock_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToMountInPlaceOfExisting" app:destination="@id/mount_in_place_of_existing_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.MountInPlaceOfExistingFragment" android:id="@id/mount_in_place_of_existing_fragment">
+        <action android:id="@id/navigateToWiringTurnOffPower" app:destination="@id/wiring_turn_off_power_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToWedgeCornerPrompt" app:destination="@id/wedge_corner_prompt_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.WiringTurnOffPowerFragment" android:id="@id/wiring_turn_off_power_fragment">
+        <action android:id="@id/navigateToWiringRemoveOldDoorbell" app:destination="@id/wiring_remove_old_doorbell_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.WiringRemoveOldDoorbellFragment" android:id="@id/wiring_remove_old_doorbell_fragment">
+        <action android:id="@id/navigateToWiringCapWires" app:destination="@id/wiring_cap_wires_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToWedgeCornerPrompt" app:destination="@id/wedge_corner_prompt_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.WiringCapWiresFragment" android:id="@id/wiring_cap_wires_fragment">
+        <action android:id="@id/navigateToWiringSwitchPowerOn" app:destination="@id/wiring_switch_power_on_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.WiringSwitchPowerOnFragment" android:id="@id/wiring_switch_power_on_fragment">
+        <argument android:name="checkConnection" app:argType="boolean" app:nullable="false" />
+        <action android:id="@id/navigateToWedgeCornerPrompt" app:destination="@id/wedge_corner_prompt_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToWirelessConnectionTimedOut" app:destination="@id/wireless_connection_timed_out_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.ChimeRiskOfShockFragment" android:id="@id/chime_risk_of_shock_fragment">
+        <action android:id="@id/navigateToWiringTurnOffPower" app:destination="@id/wiring_turn_off_power_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.WedgeCornerPromptFragment" android:id="@id/wedge_corner_prompt_fragment">
+        <argument android:name="replacingDoorbellNoChime" app:argType="boolean" app:nullable="false" />
+        <action android:id="@id/navigateToDrillTwoHoles" app:destination="@id/drill_two_holes_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToWedgeCornerAssemble" app:destination="@id/wedge_corner_assemble" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.DrillTwoHolesFragment" android:id="@id/drill_two_holes_fragment">
+        <argument android:name="replacingDoorbellNoChime" app:argType="boolean" app:nullable="false" />
+        <action android:id="@id/navigateToBackPlateConnectWires" app:destination="@id/back_plate_connect_wires_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToBackPlateScrewWall" app:destination="@id/back_plate_screw_wall" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.BackPlateConnectWiresFragment" android:id="@id/back_plate_connect_wires_fragment">
+        <argument android:name="usingWedgeCorner" app:argType="boolean" app:nullable="false" />
+        <action android:id="@id/navigateToBackPlateScrewWall" app:destination="@id/back_plate_screw_wall" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToWedgeCornerBackPlateAttach" app:destination="@id/wedge_corner_back_plate_attach" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.BackPlateScrewWallFragment" android:id="@id/back_plate_screw_wall">
+        <argument android:name="replacingDoorbellNoChime" app:argType="boolean" app:nullable="false" />
+        <action android:id="@id/navigateToBackPlatePlaceDoorbell" app:destination="@id/back_plate_place_doorbell" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.WedgeCornerAssembleFragment" android:id="@id/wedge_corner_assemble">
+        <argument android:name="replacingDoorbellNoChime" app:argType="boolean" app:nullable="false" />
+        <action android:id="@id/navigateToWedgeCornerScrew" app:destination="@id/wedge_corner_screw" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.WedgeCornerScrewFragment" android:id="@id/wedge_corner_screw">
+        <argument android:name="replacingDoorbellNoChime" app:argType="boolean" app:nullable="false" />
+        <action android:id="@id/navigateToWedgeCornerBackPlateAttach" app:destination="@id/wedge_corner_back_plate_attach" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToBackPlateConnectWires" app:destination="@id/back_plate_connect_wires_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.WedgeCornerBackPlateAttachFragment" android:id="@id/wedge_corner_back_plate_attach">
+        <argument android:name="replacingDoorbellNoChime" app:argType="boolean" app:nullable="false" />
+        <action android:id="@id/navigateToBackPlatePlaceDoorbell" app:destination="@id/back_plate_place_doorbell" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.BackPlatePlaceDoorbellFragment" android:id="@id/back_plate_place_doorbell">
+        <argument android:name="replacingDoorbellNoChime" app:argType="boolean" app:nullable="false" />
+        <action android:id="@id/navigateToWiringSwitchPowerOn" app:destination="@id/wiring_switch_power_on_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToWirelessConnectionTimedOut" app:destination="@id/wireless_connection_timed_out_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.device.onboard.doorbell.mount.WirelessConnectionTimedOutFragment" android:id="@id/wireless_connection_timed_out_fragment" />
+</navigation>

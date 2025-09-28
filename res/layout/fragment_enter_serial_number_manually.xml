@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="?colorBackgroundSurface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/enter_serial_description_area" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_buttonText="@string/find_qr_code_and_serial" app:area_text="@string/add_camera_first_line_prompt" />
+            <com.ring.android.safe.textfield.TextField android:gravity="center_horizontal" android:id="@id/enter_serial_number" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:textfield_endIcon="@drawable/picture" app:textfield_endIconContentDescription="@string/qr_button_description" app:textfield_hint="@string/enter_serial_number" app:textfield_imeOptions="actionDone" app:textfield_inputType="textVisiblePassword|textCapCharacters|textNoSuggestions" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.StickyButtonModule android:layout_gravity="bottom" android:id="@id/enter_serial_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_text="@string/continue_" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

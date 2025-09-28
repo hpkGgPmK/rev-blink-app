@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:drawable="@drawable/circle_selection_check_box" android:insetTop="@dimen/safe_button_checkbox_inset" android:insetBottom="@dimen/safe_button_checkbox_inset"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

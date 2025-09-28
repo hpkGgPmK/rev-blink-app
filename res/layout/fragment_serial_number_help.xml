@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/fragment_serial_number_help_0" android:background="@color/blink_surface" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.area.DescriptionArea android:id="@id/which_device_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:area_text="@string/serial_number_location_help_header" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <View android:id="@id/divider" android:background="@color/blink_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/which_device_header" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/options_list" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="0.0dip" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/divider" />
+</androidx.constraintlayout.widget.ConstraintLayout>

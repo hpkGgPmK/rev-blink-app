@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:background="?colorBackgroundDeep" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ring.android.safe.toolbar.SafeToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:title="@string/blink_subscription_plans" />
+    <com.ring.android.safe.container.SafeScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ring.android.safe.container.SafeLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ring.android.safe.area.DescriptionArea android:id="@id/attach_plan_success_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ring.android.safe.header.HeaderView android:id="@id/attach_plan_device_covered_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_titleText="@string/device_covered" />
+            <com.ring.android.safe.cell.ImageIconCell android:id="@id/covered_device_cell" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cell_iconType="s" />
+        </com.ring.android.safe.container.SafeLinearLayout>
+    </com.ring.android.safe.container.SafeScrollView>
+    <com.ring.android.safe.button.module.StickyButtonModule android:layout_gravity="bottom" android:id="@id/attach_plan_success_done_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonModule_text="@string/done" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

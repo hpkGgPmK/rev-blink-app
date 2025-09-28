@@ -1,0 +1,1 @@
+ALTER TABLE network ADD COLUMN save_all_liveviews INTEGER NOT NULL DEFAULT 0;

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/live_view_navigation" app:startDestination="@id/rosieDeleteFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="LiveViewV2Fragment" android:name="com.immediasemi.blink.video.live.LiveViewV2Fragment" android:id="@id/liveViewV2Fragment">
+        <action android:id="@id/navigateToRosieCalibrateFragment" app:destination="@id/rosie_calibration_nav_graph">
+            <argument android:name="network_id" app:argType="long" />
+            <argument android:name="camera_id" app:argType="long" />
+            <argument android:name="calibrated" app:argType="boolean" />
+        </action>
+        <action android:id="@id/navigateToRosieDeleteFragment" app:destination="@id/rosieDeleteFragment" />
+    </fragment>
+    <action android:id="@id/navigateToDeviceSettings" app:destination="@id/camera_settings_nav_graph">
+        <argument android:name="cameraId" app:argType="long" />
+        <argument android:name="networkId" app:argType="long" />
+    </action>
+    <include app:graph="@navigation/camera_settings_nav_graph" />
+    <action android:id="@id/navigateToLVSaveErrorDialog" app:destination="@id/liveViewSaveDialog" />
+    <dialog android:label="LiveViewSaveDialog" android:name="com.immediasemi.blink.video.live.save.LiveViewSaveDialogFragment" android:id="@id/liveViewSaveDialog">
+        <argument android:name="saveDisplayState" app:argType="com.immediasemi.blink.video.live.save.SaveDiscardDisplayState" />
+    </dialog>
+    <dialog android:label="LiveViewMoreActionsDialog" android:name="com.immediasemi.blink.video.live.action.LiveViewMoreActionsDialogFragment" android:id="@id/liveViewMoreActionsDialog">
+        <action android:id="@id/navigateToRosieDeleteFragment" app:destination="@id/rosieDeleteFragment" />
+        <action android:id="@id/navigateToRosieCalibrateFragment" app:destination="@id/rosie_calibration_nav_graph">
+            <argument android:name="network_id" app:argType="long" />
+            <argument android:name="camera_id" app:argType="long" />
+            <argument android:name="calibrated" app:argType="boolean" />
+        </action>
+        <action android:id="@id/navigateToTurnOffELVFragment" app:destination="@id/turnOffExtendedLV" />
+        <action android:id="@id/navigateToTutorialELVFragment" app:destination="@id/tutorialExtendedLV" />
+        <action android:id="@id/navigateToTutorialELVSheet" app:destination="@id/tutorialELVSheet" app:popUpTo="@id/liveViewV2Fragment" />
+    </dialog>
+    <action android:id="@id/navigateToLiveViewMore" app:destination="@id/liveViewMoreActionsDialog" />
+    <dialog android:label="ExtendedLiveViewUnavailableDialog" android:name="com.immediasemi.blink.video.live.extended.ExtendedLiveViewUnavailableDialogFragment" android:id="@id/extendedLiveViewUnavailableDialog" />
+    <action android:id="@id/navigateToExtendedLiveViewUnavailableDialog" app:destination="@id/extendedLiveViewUnavailableDialog" />
+    <include app:graph="@navigation/rosie_calibration_nav_graph" />
+    <fragment android:label="RosieDeleteFragment" android:name="com.immediasemi.blink.device.accessory.pantilt.setting.RosieDeleteFragment" android:id="@id/rosieDeleteFragment">
+        <argument android:name="network_id" app:argType="long" />
+        <argument android:name="camera_id" app:argType="long" />
+        <action android:id="@id/navigateToLiveViewV2Fragment" app:destination="@id/liveViewV2Fragment" app:popExitAnim="@anim/exit_down" app:popUpTo="@id/liveViewV2Fragment" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:label="TurnOffELVFragment" android:name="com.immediasemi.blink.video.live.extended.TurnOffExtendedLiveViewFragment" android:id="@id/turnOffExtendedLV" />
+    <fragment android:label="TutorialELVFragment" android:name="com.immediasemi.blink.video.live.extended.TutorialExtendedLiveViewFragment" android:id="@id/tutorialExtendedLV">
+        <argument android:name="elvEntitlementStatus" app:argType="com.immediasemi.blink.db.enums.EntitlementStatus" />
+        <argument android:name="hasTrial" app:argType="boolean" />
+    </fragment>
+    <dialog android:label="TutorialELVSheet" android:name="com.immediasemi.blink.video.live.extended.TutorialExtendedLiveViewSheet" android:id="@id/tutorialELVSheet">
+        <argument android:name="camera_Id" app:argType="long" />
+        <argument android:name="elvTutorialState" app:argType="com.immediasemi.blink.video.live.extended.ExtendedLiveViewTutorialVariant" />
+        <argument android:name="upsellState" app:argType="com.immediasemi.blink.common.subscription.upsell.UpsellState" />
+    </dialog>
+</navigation>

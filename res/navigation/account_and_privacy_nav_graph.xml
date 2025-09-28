@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/account_and_privacy_nav_graph" app:startDestination="@id/account_and_privacy_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="@string/account_and_privacy" android:name="com.immediasemi.blink.settings.account.AccountAndPrivacyFragment" android:id="@id/account_and_privacy_fragment">
+        <action android:id="@id/navigateToAmazonLinkingFragment" app:destination="@id/amazon_link_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right">
+            <argument android:name="createAccountFlow" app:argType="boolean" />
+        </action>
+        <action android:id="@id/navigateToAlexaLinkingFragmentLegacy" app:destination="@id/alexa_linking_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToAlexaLinkingFragment" app:destination="@id/alexa_linking_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right">
+            <argument android:name="linkStatus" app:argType="com.immediasemi.blink.settings.account.alexa.AlexaLinkStatus" app:nullable="true" />
+        </action>
+        <action android:id="@id/navigateToManageDevices" app:destination="@id/manage_devices_verify_account" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToNeighborsFragment" app:destination="@id/navigation_neighbors" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToContactPreferencesFragment" app:destination="@id/contact_preferences_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToGrantCustomerSupportAccessFragment" app:destination="@id/grant_customer_support_access_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+        <action android:id="@id/navigateToAccountManagementFragment" app:destination="@id/account_management_nav_graph" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <include app:graph="@navigation/account_management_nav_graph" />
+    <include app:graph="@navigation/amazon_link_nav_graph" />
+    <fragment android:label="fragment_alexa_linking" android:name="com.immediasemi.blink.activities.ui.main.AlexaLinkingFragment" android:id="@id/alexa_linking_fragment" />
+    <fragment android:name="com.immediasemi.blink.settings.client.ManageDevicesVerifyAccountFragment" android:id="@id/manage_devices_verify_account">
+        <action android:id="@id/navigateToManageDevicesFragment" app:destination="@id/manage_devices_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" app:popUpTo="@id/account_and_privacy_fragment" />
+    </fragment>
+    <fragment android:label="@string/manage_devices" android:name="com.immediasemi.blink.settings.client.ManageClientsFragment" android:id="@id/manage_devices_fragment" />
+    <fragment android:label="@string/neighbor" android:name="com.immediasemi.blink.apphome.ui.neighbors.NeighborsFragment" android:id="@id/navigation_neighbors" />
+    <fragment android:label="@string/contact_preferences" android:name="com.immediasemi.blink.settings.privacy.ContactPreferencesFragment" android:id="@id/contact_preferences_fragment" />
+    <fragment android:name="com.immediasemi.blink.settings.privacy.GrantCustomerSupportAccessFragment" android:id="@id/grant_customer_support_access_fragment">
+        <action android:id="@id/navigateToCustomerSupportAccessVerifyAccountFragment" app:destination="@id/customer_support_access_verify_account_fragment" app:enterAnim="@anim/enter_from_right" app:exitAnim="@anim/exit_to_left" app:popEnterAnim="@anim/enter_from_left" app:popExitAnim="@anim/exit_to_right" />
+    </fragment>
+    <fragment android:name="com.immediasemi.blink.settings.privacy.CustomerSupportAccessVerifyAccountFragment" android:id="@id/customer_support_access_verify_account_fragment" />
+    <include app:graph="@navigation/alexa_linking_nav_graph" />
+</navigation>
